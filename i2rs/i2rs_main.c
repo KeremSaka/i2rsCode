@@ -204,7 +204,7 @@ main (int argc, char **argv)
 
 
   /* i2rs vty inits. */
-  i2rs_vty_init();
+ // i2rs_vty_init();
 
   printf("Start i2rs vtyconf\n");
   /* Get configuration file. */
