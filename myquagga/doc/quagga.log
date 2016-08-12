@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdfetex 2016.8.4)  12 AUG 2016 11:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdfetex 2016.8.4)  12 AUG 2016 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -540,7 +540,7 @@ sfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on quagga.pdf (140 pages, 724958 bytes).
+Output written on quagga.pdf (140 pages, 724954 bytes).
 PDF statistics:
  2442 PDF objects out of 2487 (max. 8388607)
  2247 compressed objects within 23 object streams

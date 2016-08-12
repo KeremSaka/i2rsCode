@@ -43,8 +43,16 @@ i2rs_route_add ()//(struct prefix_ipv4 *p)
 
   if (zclient->sock < 0){
     printf("I'm at i2rs_zebra.c in i2rs_route_add(), WHERE IN HELL IS THE ZCLIENT?, zclient->sock < 0\n");
-    return -1;
+    
   }
+
+  if (zclient_socket_connect(zclient) < 0)
+    {
+      printf("zclient connection fail in i2rs_zebra.c\n");
+      zclient->fail++;
+      //zclient_event (ZCLIENT_CONNECT, zclient);
+      //return -1;
+    }
 
   routeToAdd.family = AF_INET;
   routeToAdd.prefixlen = 24; // \24 mask
@@ -217,6 +225,7 @@ void i2rs_zclient_init (struct thread_master *master)
   if (zclient == NULL){
     printf("I'm in i2rs_zebra.c, after i2rs_zclient_init (&master): WHERE IN HELL IS THE ZCLIENT?\n");
   }
+  printf("Im i2rs_zebra.c, i2rs_zclient_init(), Zclient socket number %d\n", zclient->sock);
 }
 
 void i2rs_zclient_start()
@@ -230,7 +239,7 @@ void i2rs_zclient_start()
       zclient->redist[i] = 1;
   // XXX The ret variable is 0 no matter if Quagga (zebra) is running or not...
   ret = zclient_start(zclient);
-  printf("Zclient socket number %d", zclient->sock);
+  printf("Im i2rs_zebra.c, i2rs_zclient_start(), Zclient socket number %d\n", zclient->sock);
   printf("Ret of zclient_start in i2rs_zclient_start is %d\n",ret);
   if (zclient->sock < 0){
     printf("I'm in i2rs_zebra.c, after i2rs_zclient_start and sock is < 0\n");

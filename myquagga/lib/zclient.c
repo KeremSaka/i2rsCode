@@ -414,25 +414,32 @@ zclient_send_requests (struct zclient *zclient, vrf_id_t vrf_id)
 int
 zclient_start (struct zclient *zclient)
 {
+  printf("zclient_start is called\n");
   if (zclient_debug)
     zlog_debug ("zclient_start is called");
 
   /* zclient is disabled. */
-  if (! zclient->enable)
+  if (! zclient->enable) {
+    printf("zclient is disabled\n");
     return 0;
+  }
 
   /* If already connected to the zebra. */
-  if (zclient->sock >= 0)
-    return 0;
+  if (zclient->sock >= 0) {
+    printf("If already connected to the zebra.\n");
+    return 0;}
 
   /* Check connect thread. */
-  if (zclient->t_connect)
-    return 0;
+  if (zclient->t_connect){
+    printf("Check connect thread\n");
+    return 0;}
 
   if (zclient_socket_connect(zclient) < 0)
     {
-      if (zclient_debug)
-	zlog_debug ("zclient connection fail");
+      if (zclient_debug){
+        printf("zclient connection fail\n");
+	zlog_debug ("zclient connection fail");}
+      printf("zclient connection fail2\n");
       zclient->fail++;
       zclient_event (ZCLIENT_CONNECT, zclient);
       return -1;
@@ -445,15 +452,16 @@ zclient_start (struct zclient *zclient)
   zclient->fail = 0;
   if (zclient_debug)
     zlog_debug ("zclient connect success with socket [%d]", zclient->sock);
-      
+  printf("zclient connect success with socket [%d]", zclient->sock);
   /* Create read thread. */
   zclient_event (ZCLIENT_READ, zclient);
 
   zebra_hello_send (zclient);
 
   /* Inform the successful connection. */
-  if (zclient->zebra_connected)
+  if (zclient->zebra_connected) {
     (*zclient->zebra_connected) (zclient);
+    printf("Inform the successful connection");}
 
   return 0;
 }
