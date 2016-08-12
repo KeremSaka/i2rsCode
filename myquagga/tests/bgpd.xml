@@ -1,0 +1,1344 @@
+<?xml version="1.0"?>
+<!DOCTYPE testsuite [
+<!-- testsuite.dtd -->
+<!ELEMENT testsuite (test | summary)+>
+<!ELEMENT test (input, output, result, name, prms_id )>
+  <!ELEMENT input              (#PCDATA)>
+  <!ELEMENT output             (#PCDATA)>
+  <!ELEMENT result             (#PCDATA)>
+  <!ELEMENT name               (#PCDATA)>
+  <!ELEMENT prms_id            (#PCDATA)>
+  <!ELEMENT summary 	(result, description, total)>
+  <!ELEMENT description        (#PCDATA)>
+  <!ELEMENT total              (#PCDATA)>
+]>
+<testsuite>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq1</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq1 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq2 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq3</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq3 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seqset</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seqset +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seqset2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seqset2 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse multi</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse multi +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confed</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confed +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confed2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confed2 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confset</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confset +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confmulti</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse confmulti +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq4 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse tripleseq1</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse tripleseq1 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse someprivate</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse someprivate +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse allprivate</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse allprivate +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse long +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq1extra</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse seq1extra +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse empty</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse empty +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse redundantset</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse redundantset +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_lead_asp</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_lead_asp +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_new_asp</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_new_asp +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_confed</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_confed +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_start_trans</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_start_trans +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_start_trans4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_start_trans4 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_start_trans_error</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse reconcile_start_trans_error +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse redundantset2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse redundantset2 +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse zero-size overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse zero-size overflow +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse zero-size overflow + valid segment</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse zero-size overflow + valid segment +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse invalid segment type</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest parse invalid segment type +empty_prepend</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 0</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 1</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 3</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 5</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 6</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 7</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 8</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest prepend 9</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest aggregate 0</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest aggregate 1</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest aggregate 2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest aggregate 3</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest aggregate 4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest reconcile 0</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest reconcile 1</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest reconcile 2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest reconcile 3</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest reconcile 4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 0</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 1</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 3</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 5</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 6</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 7</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 8</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 9</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 10</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 11</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 12</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 13</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 14</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 15</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 16</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 17</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 18</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 19</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 20</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest compare 21</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest empty_get</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr basic test</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr length too short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr length too long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr incorrect flag</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr as4_path, with as2 format data</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr as4, with incorrect attr length</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr basic 4-byte as-path</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr 4b AS_PATH: too short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr 4b AS_PATH: too long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr 4b AS_PATH: too long2</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr 4b AS_PATH: bad flags</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr 4b AS4_PATH w/o AS_PATH</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>aspathtest attr 4b AS4_PATH: confed</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>ecommtest ipaddr</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>ecommtest ipaddr-so</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>ecommtest asn</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>ecommtest asn4</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP4: MP IP/Uni</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MPv6: MP IPv6/Uni</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP2: MP IP/Multicast</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP3: MP IP6/MPLS-labeled VPN</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP5: MP IP6/MPLS-VPN</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP6: MP IP4/MPLS-laveled VPN</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP8: MP unknown AFI/SAFI</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP-short: MP IP4/Unicast, length too short (< minimum)</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP-overflow: MP IP4/Unicast, length too long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap caphdr: capability header, and no more</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap nodata: header, no data but length says there is</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap padded: valid, with padding</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap minsize: violates minsize requirement</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORF: ORF, simple, single entry, single tuple</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORF-many: ORF, multi entry/tuple</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORFlo: ORF, multi entry/tuple, hdr length too short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORFlu: ORF, multi entry/tuple, length too long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORFnu: ORF, multi entry/tuple, entry number too long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORFno: ORF, multi entry/tuple, entry number too short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORFpad: ORF, multi entry/tuple, padded to align</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap AS4: AS4 capability</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap GR: GR capability</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap GR-short: GR capability, but header length too short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap GR-long: GR capability, but header length too long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap GR-trunc: GR capability, but truncated</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap GR-empty: GR capability, but empty.</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap MP-empty: MP capability, but empty.</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap ORF-empty: ORF capability, but empty.</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap AS4-empty: AS4 capability, but empty.</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap dyn-empty: Dynamic capability, but empty.</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap dyn-old: Dynamic capability (deprecated version)</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap Cap-singlets: One capability per Optional-Param</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap Cap-series: Series of capability, one Optional-Param</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap AS4more: AS4 capability after other caps (singlets)</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap AS4series: AS4 capability, in series of capabilities</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap AS4real: AS4 capability, in series of capabilities</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap AS4real2: AS4 capability, in series of capabilities</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap DynCap: Dynamic Capability Message, IP/Multicast</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap DynCapLong: Dynamic Capability Message, IP/Multicast, truncated</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap DynCapPadded: Dynamic Capability Message, IP/Multicast, padded</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap DynCapMPCpadded: Dynamic Capability Message, IP/Multicast, cap data padded</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpcap DynCapMPCoverflow: Dynamic Capability Message, IP/Multicast, cap data != length</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpath bgp maximum-paths config</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpath bgp_mp_list</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpath bgp_info_mpath_update</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6: IPV6 MP Reach, global nexthop, 1 NLRI</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-2: IPV6 MP Reach, global nexthop, 2 NLRIs</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-default: IPV6 MP Reach, global nexthop, 2 NLRIs + default</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-lnh: IPV6 MP Reach, global+local nexthops, 2 NLRIs + default</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-nhlen: IPV6 MP Reach, inappropriate nexthop length</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-nhlen2: IPV6 MP Reach, invalid nexthop length</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-nhlen3: IPV6 MP Reach, nexthop length overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-nhlen4: IPV6 MP Reach, nexthop length short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-nlri: IPV6 MP Reach, NLRI bitlen overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4: IPv4 MP Reach, 2 NLRIs + default</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-nhlen: IPv4 MP Reach, nexthop lenth overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-nlrilen: IPv4 MP Reach, nlri lenth overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4: IPv4/VPNv4 MP Reach, RD, Nexthop, 2 NLRIs</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-bogus-plen: IPv4/MPLS-labeled VPN MP Reach, RD, Nexthop, NLRI / bogus p'len</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-plen1-short: IPv4/VPNv4 MP Reach, RD, Nexthop, 2 NLRIs, 1st plen short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-plen1-long: IPv4/VPNv4 MP Reach, RD, Nexthop, 2 NLRIs, 1st plen long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-plenn-long: IPv4/VPNv4 MP Reach, RD, Nexthop, 3 NLRIs, last plen long</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-plenn-short: IPv4/VPNv4 MP Reach, RD, Nexthop, 2 NLRIs, last plen short</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-bogus-rd-type: IPv4/VPNv4 MP Reach, RD, NH, 2 NLRI, unknown RD in 1st (log, but parse)</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-VPNv4-0-nlri: IPv4/VPNv4 MP Reach, RD, Nexthop, 3 NLRI, 3rd 0 bogus</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-bug: IPv6, global nexthop, 1 default NLRI</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-unreach: IPV6 MP Unreach, 1 NLRI</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-unreach2: IPV6 MP Unreach, 2 NLRIs</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-unreach-default: IPV6 MP Unreach, 2 NLRIs + default</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv6-unreach-nlri: IPV6 MP Unreach, NLRI bitlen overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-unreach: IPv4 MP Unreach, 2 NLRIs + default</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-unreach-nlrilen: IPv4 MP Unreach, nlri length overflow</name>
+    <prms_id>0</prms_id>
+  </test>
+  <test>
+    <input></input>
+    <output></output>
+    <result>PASS</result>
+    <name>testbgpmpattr IPv4-unreach-VPNv4: IPv4/MPLS-labeled VPN MP Unreach, RD, 3 NLRIs</name>
+    <prms_id>0</prms_id>
+  </test>
+  <summary>
+    <result>PASS</result>
+    <description># of expected passes</description>
+    <total>189</total>
+  </summary>
+</testsuite>

@@ -1,0 +1,24 @@
+\entry{C-f}{16}{\code {C-f}}
+\entry{RIGHT}{16}{\code {\key {RIGHT}}}
+\entry{C-b}{16}{\code {C-b}}
+\entry{LEFT}{16}{\code {\key {LEFT}}}
+\entry{M-f}{16}{\code {M-f}}
+\entry{M-b}{16}{\code {M-b}}
+\entry{C-a}{16}{\code {C-a}}
+\entry{C-e}{16}{\code {C-e}}
+\entry{C-h}{16}{\code {C-h}}
+\entry{DEL}{16}{\code {\key {DEL}}}
+\entry{C-d}{16}{\code {C-d}}
+\entry{M-d}{16}{\code {M-d}}
+\entry{C-w}{16}{\code {C-w}}
+\entry{C-k}{16}{\code {C-k}}
+\entry{C-u}{16}{\code {C-u}}
+\entry{C-t}{16}{\code {C-t}}
+\entry{C-c}{16}{\code {C-c}}
+\entry{C-z}{16}{\code {C-z}}
+\entry{C-n}{16}{\code {C-n}}
+\entry{DOWN}{16}{\code {\key {DOWN}}}
+\entry{C-p}{16}{\code {C-p}}
+\entry{UP}{16}{\code {\key {UP}}}
+\entry{TAB}{16}{\code {\key {TAB}}}
+\entry{?}{16}{\code {\key {?}}}

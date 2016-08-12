@@ -1,0 +1,579 @@
+\entry{hostname hostname}{10}{\code {hostname \var {hostname}}}
+\entry{password password}{10}{\code {password \var {password}}}
+\entry{enable password password}{10}{\code {enable password \var {password}}}
+\entry{log trap level}{10}{\code {log trap \var {level}}}
+\entry{no log trap}{10}{\code {no log trap}}
+\entry{log stdout}{10}{\code {log stdout}}
+\entry{log stdout level}{10}{\code {log stdout \var {level}}}
+\entry{no log stdout}{10}{\code {no log stdout}}
+\entry{log file filename}{11}{\code {log file \var {filename}}}
+\entry{log file filename level}{11}{\code {log file \var {filename} \var {level}}}
+\entry{no log file}{11}{\code {no log file}}
+\entry{log syslog}{11}{\code {log syslog}}
+\entry{log syslog level}{11}{\code {log syslog \var {level}}}
+\entry{no log syslog}{11}{\code {no log syslog}}
+\entry{log monitor}{11}{\code {log monitor}}
+\entry{log monitor level}{11}{\code {log monitor \var {level}}}
+\entry{no log monitor}{11}{\code {no log monitor}}
+\entry{log facility facility}{11}{\code {log facility \var {facility}}}
+\entry{no log facility}{11}{\code {no log facility}}
+\entry{log record-priority}{11}{\code {log record-priority}}
+\entry{no log record-priority}{11}{\code {no log record-priority}}
+\entry{log timestamp precision <0-6>}{12}{\code {log timestamp precision \var {<0-6>}}}
+\entry{no log timestamp precision}{12}{\code {no log timestamp precision}}
+\entry{service password-encryption}{12}{\code {service password-encryption}}
+\entry{service advanced-vty}{12}{\code {service advanced-vty}}
+\entry{service terminal-length <0-512>}{12}{\code {service terminal-length \var {<0-512>}}}
+\entry{line vty}{12}{\code {line vty}}
+\entry{banner motd default}{12}{\code {banner motd default}}
+\entry{no banner motd}{12}{\code {no banner motd}}
+\entry{exec-timeout minute}{12}{\code {exec-timeout \var {minute}}}
+\entry{exec-timeout minute second}{12}{\code {exec-timeout \var {minute} \var {second}}}
+\entry{no exec-timeout}{12}{\code {no exec-timeout}}
+\entry{access-class access-list}{12}{\code {access-class \var {access-list}}}
+\entry{write terminal}{13}{\code {write terminal}}
+\entry{write file}{13}{\code {write file}}
+\entry{configure terminal}{13}{\code {configure terminal}}
+\entry{terminal length <0-512>}{13}{\code {terminal length \var {<0-512>}}}
+\entry{who}{13}{\code {who}}
+\entry{list}{13}{\code {list}}
+\entry{show version}{13}{\code {show version}}
+\entry{show logging}{13}{\code {show logging}}
+\entry{logmsg level message}{13}{\code {logmsg \var {level} \var {message}}}
+\entry{interface ifname}{17}{\code {interface \var {ifname}}}
+\entry{shutdown}{17}{\code {shutdown}}
+\entry{no shutdown}{17}{\code {no shutdown}}
+\entry{ip address address/prefix}{17}{\code {ip address \var {address/prefix}}}
+\entry{ipv6 address address/prefix}{17}{\code {ipv6 address \var {address/prefix}}}
+\entry{no ip address address/prefix}{17}{\code {no ip address \var {address/prefix}}}
+\entry{no ipv6 address address/prefix}{17}{\code {no ipv6 address \var {address/prefix}}}
+\entry{ip address address/prefix secondary}{17}{\code {ip address \var {address/prefix} secondary}}
+\entry{no ip address address/prefix secondary}{17}{\code {no ip address \var {address/prefix} secondary}}
+\entry{description description ...}{17}{\code {description \var {description} ...}}
+\entry{multicast}{17}{\code {multicast}}
+\entry{no multicast}{17}{\code {no multicast}}
+\entry{bandwidth <1-10000000>}{17}{\code {bandwidth <1-10000000>}}
+\entry{no bandwidth <1-10000000>}{17}{\code {no bandwidth <1-10000000>}}
+\entry{link-detect}{18}{\code {link-detect}}
+\entry{no link-detect}{18}{\code {no link-detect}}
+\entry{ip route network gateway}{18}{\code {ip route \var {network} \var {gateway}}}
+\entry{ip route network netmask gateway}{18}{\code {ip route \var {network} \var {netmask} \var {gateway}}}
+\entry{ip route network gateway distance}{18}{\code {ip route \var {network} \var {gateway} \var {distance}}}
+\entry{ipv6 route network gateway}{19}{\code {ipv6 route \var {network} \var {gateway}}}
+\entry{ipv6 route network gateway distance}{19}{\code {ipv6 route \var {network} \var {gateway} \var {distance}}}
+\entry{table tableno}{19}{\code {table \var {tableno}}}
+\entry{ip multicast rpf-lookup-mode mode}{19}{\code {ip multicast rpf-lookup-mode \var {mode}}}
+\entry{no ip multicast rpf-lookup-mode [mode]}{19}{\code {no ip multicast rpf-lookup-mode [\var {mode}]}}
+\entry{show ip rpf addr}{20}{\code {show ip rpf \var {addr}}}
+\entry{show ip rpf}{20}{\code {show ip rpf}}
+\entry{ip mroute prefix nexthop [distance]}{20}{\code {ip mroute \var {prefix} \var {nexthop} [\var {distance}]}}
+\entry{no ip mroute prefix nexthop [distance]}{20}{\code {no ip mroute \var {prefix} \var {nexthop} [\var {distance}]}}
+\entry{ip protocol protocol route-map routemap}{20}{\code {ip protocol \var {protocol} route-map \var {routemap}}}
+\entry{set src address}{21}{\code {set src \var {address}}}
+\entry{show ip route}{22}{\code {show ip route}}
+\entry{show ipv6 route}{22}{\code {show ipv6 route}}
+\entry{show interface}{22}{\code {show interface}}
+\entry{show ip prefix-list [name]}{22}{\code {show ip prefix-list [\var {name}]}}
+\entry{show route-map [name]}{22}{\code {show route-map [\var {name}]}}
+\entry{show ip protocol}{22}{\code {show ip protocol}}
+\entry{show ipforward}{22}{\code {show ipforward}}
+\entry{show ipv6forward}{22}{\code {show ipv6forward}}
+\entry{show zebra fpm stats}{22}{\code {show zebra fpm stats}}
+\entry{clear zebra fpm stats}{22}{\code {clear zebra fpm stats}}
+\entry{router rip}{24}{\code {router rip}}
+\entry{no router rip}{24}{\code {no router rip}}
+\entry{network network}{24}{\code {network \var {network}}}
+\entry{no network network}{24}{\code {no network \var {network}}}
+\entry{network ifname}{24}{\code {network \var {ifname}}}
+\entry{no network ifname}{24}{\code {no network \var {ifname}}}
+\entry{neighbor a.b.c.d}{24}{\code {neighbor \var {a.b.c.d}}}
+\entry{no neighbor a.b.c.d}{24}{\code {no neighbor \var {a.b.c.d}}}
+\entry{passive-interface (IFNAME|default)}{25}{\code {passive-interface (\var {IFNAME}|default)}}
+\entry{no passive-interface IFNAME}{25}{\code {no passive-interface \var {IFNAME}}}
+\entry{ip split-horizon}{25}{\code {ip split-horizon}}
+\entry{no ip split-horizon}{25}{\code {no ip split-horizon}}
+\entry{version version}{25}{\code {version \var {version}}}
+\entry{no version}{25}{\code {no version}}
+\entry{ip rip send version version}{25}{\code {ip rip send version \var {version}}}
+\entry{ip rip receive version version}{25}{\code {ip rip receive version \var {version}}}
+\entry{redistribute kernel}{26}{\code {redistribute kernel}}
+\entry{redistribute kernel metric <0-16>}{26}{\code {redistribute kernel metric <0-16>}}
+\entry{redistribute kernel route-map route-map}{26}{\code {redistribute kernel route-map \var {route-map}}}
+\entry{no redistribute kernel}{26}{\code {no redistribute kernel}}
+\entry{redistribute static}{26}{\code {redistribute static}}
+\entry{redistribute static metric <0-16>}{26}{\code {redistribute static metric <0-16>}}
+\entry{redistribute static route-map route-map}{26}{\code {redistribute static route-map \var {route-map}}}
+\entry{no redistribute static}{26}{\code {no redistribute static}}
+\entry{redistribute connected}{26}{\code {redistribute connected}}
+\entry{redistribute connected metric <0-16>}{26}{\code {redistribute connected metric <0-16>}}
+\entry{redistribute connected route-map route-map}{26}{\code {redistribute connected route-map \var {route-map}}}
+\entry{no redistribute connected}{26}{\code {no redistribute connected}}
+\entry{redistribute ospf}{26}{\code {redistribute ospf}}
+\entry{redistribute ospf metric <0-16>}{26}{\code {redistribute ospf metric <0-16>}}
+\entry{redistribute ospf route-map route-map}{26}{\code {redistribute ospf route-map \var {route-map}}}
+\entry{no redistribute ospf}{26}{\code {no redistribute ospf}}
+\entry{redistribute bgp}{26}{\code {redistribute bgp}}
+\entry{redistribute bgp metric <0-16>}{26}{\code {redistribute bgp metric <0-16>}}
+\entry{redistribute bgp route-map route-map}{26}{\code {redistribute bgp route-map \var {route-map}}}
+\entry{no redistribute bgp}{26}{\code {no redistribute bgp}}
+\entry{default-information originate}{26}{\code {default-information originate}}
+\entry{route a.b.c.d/m}{26}{\code {route \var {a.b.c.d/m}}}
+\entry{no route a.b.c.d/m}{26}{\code {no route \var {a.b.c.d/m}}}
+\entry{distribute-list access_list direct ifname}{27}{\code {distribute-list \var {access_list} \var {direct} \var {ifname}}}
+\entry{distribute-list prefix prefix_list (in|out) ifname}{27}{\code {distribute-list prefix \var {prefix_list} (in|out) \var {ifname}}}
+\entry{default-metric <1-16>}{27}{\code {default-metric <1-16>}}
+\entry{no default-metric <1-16>}{27}{\code {no default-metric <1-16>}}
+\entry{offset-list access-list (in|out)}{27}{\code {offset-list \var {access-list} (in|out)}}
+\entry{offset-list access-list (in|out) ifname}{27}{\code {offset-list \var {access-list} (in|out) \var {ifname}}}
+\entry{distance <1-255>}{27}{\code {distance <1-255>}}
+\entry{no distance <1-255>}{27}{\code {no distance <1-255>}}
+\entry{distance <1-255> A.B.C.D/M}{28}{\code {distance <1-255> \var {A.B.C.D/M}}}
+\entry{no distance <1-255> A.B.C.D/M}{28}{\code {no distance <1-255> \var {A.B.C.D/M}}}
+\entry{distance <1-255> A.B.C.D/M access-list}{28}{\code {distance <1-255> \var {A.B.C.D/M} \var {access-list}}}
+\entry{no distance <1-255> A.B.C.D/M access-list}{28}{\code {no distance <1-255> \var {A.B.C.D/M} \var {access-list}}}
+\entry{match interface word}{28}{\code {match interface \var {word}}}
+\entry{match ip address word}{28}{\code {match ip address \var {word}}}
+\entry{match ip address prefix-list word}{28}{\code {match ip address prefix-list \var {word}}}
+\entry{match ip next-hop word}{28}{\code {match ip next-hop \var {word}}}
+\entry{match ip next-hop prefix-list word}{28}{\code {match ip next-hop prefix-list \var {word}}}
+\entry{match metric <0-4294967295>}{28}{\code {match metric <0-4294967295>}}
+\entry{set ip next-hop A.B.C.D}{29}{\code {set ip next-hop A.B.C.D}}
+\entry{set metric <0-4294967295>}{29}{\code {set metric <0-4294967295>}}
+\entry{ip rip authentication mode md5}{29}{\code {ip rip authentication mode md5}}
+\entry{no ip rip authentication mode md5}{29}{\code {no ip rip authentication mode md5}}
+\entry{ip rip authentication mode text}{29}{\code {ip rip authentication mode text}}
+\entry{no ip rip authentication mode text}{29}{\code {no ip rip authentication mode text}}
+\entry{ip rip authentication string string}{29}{\code {ip rip authentication string \var {string}}}
+\entry{no ip rip authentication string string}{29}{\code {no ip rip authentication string \var {string}}}
+\entry{ip rip authentication key-chain key-chain}{29}{\code {ip rip authentication key-chain \var {key-chain}}}
+\entry{no ip rip authentication key-chain key-chain}{29}{\code {no ip rip authentication key-chain \var {key-chain}}}
+\entry{timers basic update timeout garbage}{30}{\code {timers basic \var {update} \var {timeout} \var {garbage}}}
+\entry{no timers basic}{30}{\code {no timers basic}}
+\entry{show ip rip}{30}{\code {show ip rip}}
+\entry{show ip rip status}{30}{\code {show ip rip status}}
+\entry{debug rip events}{31}{\code {debug rip events}}
+\entry{debug rip packet}{31}{\code {debug rip packet}}
+\entry{debug rip zebra}{31}{\code {debug rip zebra}}
+\entry{show debugging rip}{31}{\code {show debugging rip}}
+\entry{router ripng}{32}{\code {router ripng}}
+\entry{flush_timer time}{32}{\code {flush_timer \var {time}}}
+\entry{network network}{32}{\code {network \var {network}}}
+\entry{network ifname}{32}{\code {network \var {ifname}}}
+\entry{route network}{32}{\code {route \var {network}}}
+\entry{router zebra}{32}{\code {router zebra}}
+\entry{show ip ripng}{32}{\code {show ip ripng}}
+\entry{show debugging ripng}{32}{\code {show debugging ripng}}
+\entry{debug ripng events}{32}{\code {debug ripng events}}
+\entry{debug ripng packet}{32}{\code {debug ripng packet}}
+\entry{debug ripng zebra}{32}{\code {debug ripng zebra}}
+\entry{distribute-list access_list (in|out) ifname}{32}{\code {distribute-list \var {access_list} (in|out) \var {ifname}}}
+\entry{router ospf}{42}{\code {router ospf}}
+\entry{no router ospf}{42}{\code {no router ospf}}
+\entry{ospf router-id a.b.c.d}{42}{\code {ospf router-id \var {a.b.c.d}}}
+\entry{no ospf router-id}{42}{\code {no ospf router-id}}
+\entry{ospf abr-type type}{42}{\code {ospf abr-type \var {type}}}
+\entry{no ospf abr-type type}{42}{\code {no ospf abr-type \var {type}}}
+\entry{ospf rfc1583compatibility}{43}{\code {ospf rfc1583compatibility}}
+\entry{no ospf rfc1583compatibility}{43}{\code {no ospf rfc1583compatibility}}
+\entry{log-adjacency-changes [detail]}{43}{\code {log-adjacency-changes [detail]}}
+\entry{no log-adjacency-changes [detail]}{43}{\code {no log-adjacency-changes [detail]}}
+\entry{passive-interface interface}{43}{\code {passive-interface \var {interface}}}
+\entry{no passive-interface interface}{43}{\code {no passive-interface \var {interface}}}
+\entry{timers throttle spf delay initial-holdtime max-holdtime}{43}{\code {timers throttle spf \var {delay} \var {initial-holdtime} \var {max-holdtime}}}
+\entry{no timers throttle spf}{43}{\code {no timers throttle spf}}
+\entry{max-metric router-lsa [on-startup|on-shutdown] <5-86400>}{44}{\code {max-metric router-lsa [on-startup|on-shutdown] <5-86400>}}
+\entry{max-metric router-lsa administrative}{44}{\code {max-metric router-lsa administrative}}
+\entry{no max-metric router-lsa [on-startup|on-shutdown|administrative]}{44}{\code {no max-metric router-lsa [on-startup|on-shutdown|administrative]}}
+\entry{auto-cost reference-bandwidth <1-4294967>}{44}{\code {auto-cost reference-bandwidth <1-4294967>}}
+\entry{no auto-cost reference-bandwidth}{44}{\code {no auto-cost reference-bandwidth}}
+\entry{network a.b.c.d/m area a.b.c.d}{44}{\code {network \var {a.b.c.d/m} area \var {a.b.c.d}}}
+\entry{network a.b.c.d/m area <0-4294967295>}{44}{\code {network \var {a.b.c.d/m} area \var {<0-4294967295>}}}
+\entry{no network a.b.c.d/m area a.b.c.d}{44}{\code {no network \var {a.b.c.d/m} area \var {a.b.c.d}}}
+\entry{no network a.b.c.d/m area <0-4294967295>}{44}{\code {no network \var {a.b.c.d/m} area \var {<0-4294967295>}}}
+\entry{area a.b.c.d range a.b.c.d/m}{45}{\code {area \var {a.b.c.d} range \var {a.b.c.d/m}}}
+\entry{area <0-4294967295> range a.b.c.d/m}{45}{\code {area <0-4294967295> range \var {a.b.c.d/m}}}
+\entry{no area a.b.c.d range a.b.c.d/m}{45}{\code {no area \var {a.b.c.d} range \var {a.b.c.d/m}}}
+\entry{no area <0-4294967295> range a.b.c.d/m}{45}{\code {no area <0-4294967295> range \var {a.b.c.d/m}}}
+\entry{area a.b.c.d range IPV4_PREFIX not-advertise}{45}{\code {area \var {a.b.c.d} range IPV4_PREFIX not-advertise}}
+\entry{no area a.b.c.d range IPV4_PREFIX not-advertise}{45}{\code {no area \var {a.b.c.d} range IPV4_PREFIX not-advertise}}
+\entry{area a.b.c.d range IPV4_PREFIX substitute IPV4_PREFIX}{45}{\code {area \var {a.b.c.d} range IPV4_PREFIX substitute IPV4_PREFIX}}
+\entry{no area a.b.c.d range IPV4_PREFIX substitute IPV4_PREFIX}{45}{\code {no area \var {a.b.c.d} range IPV4_PREFIX substitute IPV4_PREFIX}}
+\entry{area a.b.c.d virtual-link a.b.c.d}{46}{\code {area \var {a.b.c.d} virtual-link \var {a.b.c.d}}}
+\entry{area <0-4294967295> virtual-link a.b.c.d}{46}{\code {area <0-4294967295> virtual-link \var {a.b.c.d}}}
+\entry{no area a.b.c.d virtual-link a.b.c.d}{46}{\code {no area \var {a.b.c.d} virtual-link \var {a.b.c.d}}}
+\entry{no area <0-4294967295> virtual-link a.b.c.d}{46}{\code {no area <0-4294967295> virtual-link \var {a.b.c.d}}}
+\entry{area a.b.c.d shortcut}{46}{\code {area \var {a.b.c.d} shortcut}}
+\entry{area <0-4294967295> shortcut}{46}{\code {area <0-4294967295> shortcut}}
+\entry{no area a.b.c.d shortcut}{46}{\code {no area \var {a.b.c.d} shortcut}}
+\entry{no area <0-4294967295> shortcut}{46}{\code {no area <0-4294967295> shortcut}}
+\entry{area a.b.c.d stub}{46}{\code {area \var {a.b.c.d} stub}}
+\entry{area <0-4294967295> stub}{46}{\code {area <0-4294967295> stub}}
+\entry{no area a.b.c.d stub}{46}{\code {no area \var {a.b.c.d} stub}}
+\entry{no area <0-4294967295> stub}{46}{\code {no area <0-4294967295> stub}}
+\entry{area a.b.c.d stub no-summary}{46}{\code {area \var {a.b.c.d} stub no-summary}}
+\entry{area <0-4294967295> stub no-summary}{46}{\code {area <0-4294967295> stub no-summary}}
+\entry{no area a.b.c.d stub no-summary}{46}{\code {no area \var {a.b.c.d} stub no-summary}}
+\entry{no area <0-4294967295> stub no-summary}{46}{\code {no area <0-4294967295> stub no-summary}}
+\entry{area a.b.c.d default-cost <0-16777215>}{46}{\code {area \var {a.b.c.d} default-cost <0-16777215>}}
+\entry{no area a.b.c.d default-cost <0-16777215>}{46}{\code {no area \var {a.b.c.d} default-cost <0-16777215>}}
+\entry{area a.b.c.d export-list NAME}{46}{\code {area \var {a.b.c.d} export-list NAME}}
+\entry{area <0-4294967295> export-list NAME}{46}{\code {area <0-4294967295> export-list NAME}}
+\entry{no area a.b.c.d export-list NAME}{46}{\code {no area \var {a.b.c.d} export-list NAME}}
+\entry{no area <0-4294967295> export-list NAME}{46}{\code {no area <0-4294967295> export-list NAME}}
+\entry{area a.b.c.d import-list NAME}{47}{\code {area \var {a.b.c.d} import-list NAME}}
+\entry{area <0-4294967295> import-list NAME}{47}{\code {area <0-4294967295> import-list NAME}}
+\entry{no area a.b.c.d import-list NAME}{47}{\code {no area \var {a.b.c.d} import-list NAME}}
+\entry{no area <0-4294967295> import-list NAME}{47}{\code {no area <0-4294967295> import-list NAME}}
+\entry{area a.b.c.d filter-list prefix NAME in}{47}{\code {area \var {a.b.c.d} filter-list prefix NAME in}}
+\entry{area a.b.c.d filter-list prefix NAME out}{47}{\code {area \var {a.b.c.d} filter-list prefix NAME out}}
+\entry{area <0-4294967295> filter-list prefix NAME in}{47}{\code {area <0-4294967295> filter-list prefix NAME in}}
+\entry{area <0-4294967295> filter-list prefix NAME out}{47}{\code {area <0-4294967295> filter-list prefix NAME out}}
+\entry{no area a.b.c.d filter-list prefix NAME in}{47}{\code {no area \var {a.b.c.d} filter-list prefix NAME in}}
+\entry{no area a.b.c.d filter-list prefix NAME out}{47}{\code {no area \var {a.b.c.d} filter-list prefix NAME out}}
+\entry{no area <0-4294967295> filter-list prefix NAME in}{47}{\code {no area <0-4294967295> filter-list prefix NAME in}}
+\entry{no area <0-4294967295> filter-list prefix NAME out}{47}{\code {no area <0-4294967295> filter-list prefix NAME out}}
+\entry{area a.b.c.d authentication}{47}{\code {area \var {a.b.c.d} authentication}}
+\entry{area <0-4294967295> authentication}{47}{\code {area <0-4294967295> authentication}}
+\entry{no area a.b.c.d authentication}{47}{\code {no area \var {a.b.c.d} authentication}}
+\entry{no area <0-4294967295> authentication}{47}{\code {no area <0-4294967295> authentication}}
+\entry{area a.b.c.d authentication message-digest}{47}{\code {area \var {a.b.c.d} authentication message-digest}}
+\entry{area <0-4294967295> authentication message-digest}{47}{\code {area <0-4294967295> authentication message-digest}}
+\entry{ip ospf area AREA [ADDR]}{48}{\code {ip ospf area \var {AREA} [\var {ADDR}]}}
+\entry{no ip ospf area [ADDR]}{48}{\code {no ip ospf area [\var {ADDR}]}}
+\entry{ip ospf authentication-key AUTH_KEY}{48}{\code {ip ospf authentication-key \var {AUTH_KEY}}}
+\entry{no ip ospf authentication-key}{48}{\code {no ip ospf authentication-key}}
+\entry{ip ospf authentication message-digest}{48}{\code {ip ospf authentication message-digest}}
+\entry{ip ospf message-digest-key KEYID md5 KEY}{48}{\code {ip ospf message-digest-key KEYID md5 KEY}}
+\entry{no ip ospf message-digest-key}{48}{\code {no ip ospf message-digest-key}}
+\entry{ip ospf cost <1-65535>}{48}{\code {ip ospf cost <1-65535>}}
+\entry{no ip ospf cost}{48}{\code {no ip ospf cost}}
+\entry{ip ospf dead-interval <1-65535>}{48}{\code {ip ospf dead-interval <1-65535>}}
+\entry{ip ospf dead-interval minimal hello-multiplier <2-20>}{48}{\code {ip ospf dead-interval minimal hello-multiplier <2-20>}}
+\entry{no ip ospf dead-interval}{48}{\code {no ip ospf dead-interval}}
+\entry{ip ospf hello-interval <1-65535>}{49}{\code {ip ospf hello-interval <1-65535>}}
+\entry{no ip ospf hello-interval}{49}{\code {no ip ospf hello-interval}}
+\entry{ip ospf network (broadcast|non-broadcast|point-to-multipoint|point-to-point)}{49}{\code {ip ospf network (broadcast|non-broadcast|point-to-multipoint|point-to-point)}}
+\entry{no ip ospf network}{49}{\code {no ip ospf network}}
+\entry{ip ospf priority <0-255>}{49}{\code {ip ospf priority <0-255>}}
+\entry{no ip ospf priority}{49}{\code {no ip ospf priority}}
+\entry{ip ospf retransmit-interval <1-65535>}{49}{\code {ip ospf retransmit-interval <1-65535>}}
+\entry{no ip ospf retransmit interval}{49}{\code {no ip ospf retransmit interval}}
+\entry{ip ospf transmit-delay}{49}{\code {ip ospf transmit-delay}}
+\entry{no ip ospf transmit-delay}{49}{\code {no ip ospf transmit-delay}}
+\entry{redistribute (kernel|connected|static|rip|bgp)}{49}{\code {redistribute (kernel|connected|static|rip|bgp)}}
+\entry{redistribute (kernel|connected|static|rip|bgp) route-map}{49}{\code {redistribute (kernel|connected|static|rip|bgp) \var {route-map}}}
+\entry{redistribute (kernel|connected|static|rip|bgp) metric-type (1|2)}{49}{\code {redistribute (kernel|connected|static|rip|bgp) metric-type (1|2)}}
+\entry{redistribute (kernel|connected|static|rip|bgp) metric-type (1|2) route-map word}{50}{\code {redistribute (kernel|connected|static|rip|bgp) metric-type (1|2) route-map \var {word}}}
+\entry{redistribute (kernel|connected|static|rip|bgp) metric <0-16777214>}{50}{\code {redistribute (kernel|connected|static|rip|bgp) metric <0-16777214>}}
+\entry{redistribute (kernel|connected|static|rip|bgp) metric <0-16777214> route-map word}{50}{\code {redistribute (kernel|connected|static|rip|bgp) metric <0-16777214> route-map \var {word}}}
+\entry{redistribute (kernel|connected|static|rip|bgp) metric-type (1|2) metric <0-16777214>}{50}{\code {redistribute (kernel|connected|static|rip|bgp) metric-type (1|2) metric <0-16777214>}}
+\entry{redistribute (kernel|connected|static|rip|bgp) metric-type (1|2) metric <0-16777214> route-map word}{50}{\code {redistribute (kernel|connected|static|rip|bgp) metric-type (1|2) metric <0-16777214> route-map \var {word}}}
+\entry{no redistribute (kernel|connected|static|rip|bgp)}{50}{\code {no redistribute (kernel|connected|static|rip|bgp)}}
+\entry{default-information originate}{50}{\code {default-information originate}}
+\entry{default-information originate metric <0-16777214>}{50}{\code {default-information originate metric <0-16777214>}}
+\entry{default-information originate metric <0-16777214> metric-type (1|2)}{50}{\code {default-information originate metric <0-16777214> metric-type (1|2)}}
+\entry{default-information originate metric <0-16777214> metric-type (1|2) route-map word}{50}{\code {default-information originate metric <0-16777214> metric-type (1|2) route-map \var {word}}}
+\entry{default-information originate always}{50}{\code {default-information originate always}}
+\entry{default-information originate always metric <0-16777214>}{50}{\code {default-information originate always metric <0-16777214>}}
+\entry{default-information originate always metric <0-16777214> metric-type (1|2)}{50}{\code {default-information originate always metric <0-16777214> metric-type (1|2)}}
+\entry{default-information originate always metric <0-16777214> metric-type (1|2) route-map word}{50}{\code {default-information originate always metric <0-16777214> metric-type (1|2) route-map \var {word}}}
+\entry{no default-information originate}{50}{\code {no default-information originate}}
+\entry{distribute-list NAME out (kernel|connected|static|rip|ospf}{51}{\code {distribute-list NAME out (kernel|connected|static|rip|ospf}}
+\entry{no distribute-list NAME out (kernel|connected|static|rip|ospf}{51}{\code {no distribute-list NAME out (kernel|connected|static|rip|ospf}}
+\entry{default-metric <0-16777214>}{51}{\code {default-metric <0-16777214>}}
+\entry{no default-metric}{51}{\code {no default-metric}}
+\entry{distance <1-255>}{51}{\code {distance <1-255>}}
+\entry{no distance <1-255>}{51}{\code {no distance <1-255>}}
+\entry{distance ospf (intra-area|inter-area|external) <1-255>}{51}{\code {distance ospf (intra-area|inter-area|external) <1-255>}}
+\entry{no distance ospf}{51}{\code {no distance ospf}}
+\entry{show ip ospf}{51}{\code {show ip ospf}}
+\entry{show ip ospf interface [INTERFACE]}{51}{\code {show ip ospf interface [INTERFACE]}}
+\entry{show ip ospf neighbor}{51}{\code {show ip ospf neighbor}}
+\entry{show ip ospf neighbor INTERFACE}{51}{\code {show ip ospf neighbor INTERFACE}}
+\entry{show ip ospf neighbor detail}{51}{\code {show ip ospf neighbor detail}}
+\entry{show ip ospf neighbor INTERFACE detail}{51}{\code {show ip ospf neighbor INTERFACE detail}}
+\entry{show ip ospf database}{51}{\code {show ip ospf database}}
+\entry{show ip ospf database (asbr-summary|external|network|router|summary)}{51}{\code {show ip ospf database (asbr-summary|external|network|router|summary)}}
+\entry{show ip ospf database (asbr-summary|external|network|router|summary) link-state-id}{51}{\code {show ip ospf database (asbr-summary|external|network|router|summary) \var {link-state-id}}}
+\entry{show ip ospf database (asbr-summary|external|network|router|summary) link-state-id adv-router adv-router}{51}{\code {show ip ospf database (asbr-summary|external|network|router|summary) \var {link-state-id} adv-router \var {adv-router}}}
+\entry{show ip ospf database (asbr-summary|external|network|router|summary) adv-router adv-router}{51}{\code {show ip ospf database (asbr-summary|external|network|router|summary) adv-router \var {adv-router}}}
+\entry{show ip ospf database (asbr-summary|external|network|router|summary) link-state-id self-originate}{51}{\code {show ip ospf database (asbr-summary|external|network|router|summary) \var {link-state-id} self-originate}}
+\entry{show ip ospf database (asbr-summary|external|network|router|summary) self-originate}{51}{\code {show ip ospf database (asbr-summary|external|network|router|summary) self-originate}}
+\entry{show ip ospf database max-age}{51}{\code {show ip ospf database max-age}}
+\entry{show ip ospf database self-originate}{52}{\code {show ip ospf database self-originate}}
+\entry{show ip ospf route}{52}{\code {show ip ospf route}}
+\entry{debug ospf packet (hello|dd|ls-request|ls-update|ls-ack|all) (send|recv) [detail]}{52}{\code {debug ospf packet (hello|dd|ls-request|ls-update|ls-ack|all) (send|recv) [detail]}}
+\entry{no debug ospf packet (hello|dd|ls-request|ls-update|ls-ack|all) (send|recv) [detail]}{52}{\code {no debug ospf packet (hello|dd|ls-request|ls-update|ls-ack|all) (send|recv) [detail]}}
+\entry{debug ospf ism}{52}{\code {debug ospf ism}}
+\entry{debug ospf ism (status|events|timers)}{52}{\code {debug ospf ism (status|events|timers)}}
+\entry{no debug ospf ism}{52}{\code {no debug ospf ism}}
+\entry{no debug ospf ism (status|events|timers)}{52}{\code {no debug ospf ism (status|events|timers)}}
+\entry{debug ospf nsm}{52}{\code {debug ospf nsm}}
+\entry{debug ospf nsm (status|events|timers)}{52}{\code {debug ospf nsm (status|events|timers)}}
+\entry{no debug ospf nsm}{52}{\code {no debug ospf nsm}}
+\entry{no debug ospf nsm (status|events|timers)}{52}{\code {no debug ospf nsm (status|events|timers)}}
+\entry{debug ospf lsa}{52}{\code {debug ospf lsa}}
+\entry{debug ospf lsa (generate|flooding|refresh)}{52}{\code {debug ospf lsa (generate|flooding|refresh)}}
+\entry{no debug ospf lsa}{52}{\code {no debug ospf lsa}}
+\entry{no debug ospf lsa (generate|flooding|refresh)}{52}{\code {no debug ospf lsa (generate|flooding|refresh)}}
+\entry{debug ospf zebra}{52}{\code {debug ospf zebra}}
+\entry{debug ospf zebra (interface|redistribute)}{52}{\code {debug ospf zebra (interface|redistribute)}}
+\entry{no debug ospf zebra}{52}{\code {no debug ospf zebra}}
+\entry{no debug ospf zebra (interface|redistribute)}{52}{\code {no debug ospf zebra (interface|redistribute)}}
+\entry{show debugging ospf}{52}{\code {show debugging ospf}}
+\entry{router ospf6}{54}{\code {router ospf6}}
+\entry{router-id a.b.c.d}{54}{\code {router-id \var {a.b.c.d}}}
+\entry{interface ifname area area}{54}{\code {interface \var {ifname} area \var {area}}}
+\entry{timers throttle spf delay initial-holdtime max-holdtime}{54}{\code {timers throttle spf \var {delay} \var {initial-holdtime} \var {max-holdtime}}}
+\entry{no timers throttle spf}{54}{\code {no timers throttle spf}}
+\entry{auto-cost reference-bandwidth cost}{54}{\code {auto-cost reference-bandwidth \var {cost}}}
+\entry{no auto-cost reference-bandwidth}{54}{\code {no auto-cost reference-bandwidth}}
+\entry{ipv6 ospf6 cost COST}{55}{\code {ipv6 ospf6 cost COST}}
+\entry{ipv6 ospf6 hello-interval HELLOINTERVAL}{55}{\code {ipv6 ospf6 hello-interval HELLOINTERVAL}}
+\entry{ipv6 ospf6 dead-interval DEADINTERVAL}{55}{\code {ipv6 ospf6 dead-interval DEADINTERVAL}}
+\entry{ipv6 ospf6 retransmit-interval RETRANSMITINTERVAL}{55}{\code {ipv6 ospf6 retransmit-interval RETRANSMITINTERVAL}}
+\entry{ipv6 ospf6 priority PRIORITY}{55}{\code {ipv6 ospf6 priority PRIORITY}}
+\entry{ipv6 ospf6 transmit-delay TRANSMITDELAY}{55}{\code {ipv6 ospf6 transmit-delay TRANSMITDELAY}}
+\entry{ipv6 ospf6 network (broadcast|point-to-point)}{55}{\code {ipv6 ospf6 network (broadcast|point-to-point)}}
+\entry{redistribute static}{55}{\code {redistribute static}}
+\entry{redistribute connected}{55}{\code {redistribute connected}}
+\entry{redistribute ripng}{55}{\code {redistribute ripng}}
+\entry{show ipv6 ospf6 [INSTANCE_ID]}{55}{\code {show ipv6 ospf6 [INSTANCE_ID]}}
+\entry{show ipv6 ospf6 database}{55}{\code {show ipv6 ospf6 database}}
+\entry{show ipv6 ospf6 interface}{55}{\code {show ipv6 ospf6 interface}}
+\entry{show ipv6 ospf6 neighbor}{55}{\code {show ipv6 ospf6 neighbor}}
+\entry{show ipv6 ospf6 request-list A.B.C.D}{55}{\code {show ipv6 ospf6 request-list A.B.C.D}}
+\entry{show ipv6 route ospf6}{55}{\code {show ipv6 route ospf6}}
+\entry{router bgp asn}{57}{\code {router bgp \var {asn}}}
+\entry{no router bgp asn}{57}{\code {no router bgp \var {asn}}}
+\entry{bgp router-id A.B.C.D}{57}{\code {bgp router-id \var {A.B.C.D}}}
+\entry{distance bgp <1-255> <1-255> <1-255>}{58}{\code {distance bgp <1-255> <1-255> <1-255>}}
+\entry{distance <1-255> A.B.C.D/M}{58}{\code {distance <1-255> \var {A.B.C.D/M}}}
+\entry{distance <1-255> A.B.C.D/M word}{58}{\code {distance <1-255> \var {A.B.C.D/M} \var {word}}}
+\entry{bgp bestpath as-path confed}{59}{\code {bgp bestpath as-path confed}}
+\entry{bgp bestpath as-path multipath-relax}{59}{\code {bgp bestpath as-path multipath-relax}}
+\entry{bgp bestpath compare-routerid}{59}{\code {bgp bestpath compare-routerid}}
+\entry{bgp dampening <1-45> <1-20000> <1-20000> <1-255>}{59}{\code {bgp dampening \var {<1-45>} \var {<1-20000>} \var {<1-20000>} \var {<1-255>}}}
+\entry{bgp deterministic-med}{63}{\code {bgp deterministic-med}}
+\entry{bgp always-compare-med}{63}{\code {bgp always-compare-med}}
+\entry{network A.B.C.D/M}{64}{\code {network \var {A.B.C.D/M}}}
+\entry{no network A.B.C.D/M}{64}{\code {no network \var {A.B.C.D/M}}}
+\entry{aggregate-address A.B.C.D/M}{64}{\code {aggregate-address \var {A.B.C.D/M}}}
+\entry{aggregate-address A.B.C.D/M as-set}{64}{\code {aggregate-address \var {A.B.C.D/M} as-set}}
+\entry{aggregate-address A.B.C.D/M summary-only}{64}{\code {aggregate-address \var {A.B.C.D/M} summary-only}}
+\entry{no aggregate-address A.B.C.D/M}{64}{\code {no aggregate-address \var {A.B.C.D/M}}}
+\entry{redistribute kernel}{64}{\code {redistribute kernel}}
+\entry{redistribute static}{64}{\code {redistribute static}}
+\entry{redistribute connected}{64}{\code {redistribute connected}}
+\entry{redistribute rip}{64}{\code {redistribute rip}}
+\entry{redistribute ospf}{64}{\code {redistribute ospf}}
+\entry{neighbor peer remote-as asn}{65}{\code {neighbor \var {peer} remote-as \var {asn}}}
+\entry{neighbor peer shutdown}{65}{\code {neighbor \var {peer} shutdown}}
+\entry{no neighbor peer shutdown}{65}{\code {no neighbor \var {peer} shutdown}}
+\entry{neighbor peer ebgp-multihop}{65}{\code {neighbor \var {peer} ebgp-multihop}}
+\entry{no neighbor peer ebgp-multihop}{65}{\code {no neighbor \var {peer} ebgp-multihop}}
+\entry{neighbor peer description ...}{65}{\code {neighbor \var {peer} description ...}}
+\entry{no neighbor peer description ...}{65}{\code {no neighbor \var {peer} description ...}}
+\entry{neighbor peer version version}{65}{\code {neighbor \var {peer} version \var {version}}}
+\entry{neighbor peer interface ifname}{65}{\code {neighbor \var {peer} interface \var {ifname}}}
+\entry{no neighbor peer interface ifname}{65}{\code {no neighbor \var {peer} interface \var {ifname}}}
+\entry{neighbor peer next-hop-self [all]}{65}{\code {neighbor \var {peer} next-hop-self [all]}}
+\entry{no neighbor peer next-hop-self [all]}{65}{\code {no neighbor \var {peer} next-hop-self [all]}}
+\entry{neighbor peer update-source <ifname|address>}{66}{\code {neighbor \var {peer} update-source \var {<ifname|address>}}}
+\entry{no neighbor peer update-source}{66}{\code {no neighbor \var {peer} update-source}}
+\entry{neighbor peer default-originate}{66}{\code {neighbor \var {peer} default-originate}}
+\entry{no neighbor peer default-originate}{66}{\code {no neighbor \var {peer} default-originate}}
+\entry{neighbor peer port port}{66}{\code {neighbor \var {peer} port \var {port}}}
+\entry{neighbor peer port port}{66}{\code {neighbor \var {peer} port \var {port}}}
+\entry{neighbor peer send-community}{66}{\code {neighbor \var {peer} send-community}}
+\entry{neighbor peer send-community}{66}{\code {neighbor \var {peer} send-community}}
+\entry{neighbor peer weight weight}{66}{\code {neighbor \var {peer} weight \var {weight}}}
+\entry{no neighbor peer weight weight}{66}{\code {no neighbor \var {peer} weight \var {weight}}}
+\entry{neighbor peer maximum-prefix number}{66}{\code {neighbor \var {peer} maximum-prefix \var {number}}}
+\entry{no neighbor peer maximum-prefix number}{66}{\code {no neighbor \var {peer} maximum-prefix \var {number}}}
+\entry{neighbor peer local-as as-number}{66}{\code {neighbor \var {peer} local-as \var {as-number}}}
+\entry{neighbor peer local-as as-number no-prepend}{66}{\code {neighbor \var {peer} local-as \var {as-number} no-prepend}}
+\entry{neighbor peer local-as as-number no-prepend replace-as}{66}{\code {neighbor \var {peer} local-as \var {as-number} no-prepend replace-as}}
+\entry{no neighbor peer local-as}{66}{\code {no neighbor \var {peer} local-as}}
+\entry{neighbor peer ttl-security hops number}{66}{\code {neighbor \var {peer} ttl-security hops \var {number}}}
+\entry{no neighbor peer ttl-security hops number}{66}{\code {no neighbor \var {peer} ttl-security hops \var {number}}}
+\entry{neighbor peer distribute-list name [in|out]}{67}{\code {neighbor \var {peer} distribute-list \var {name} [in|out]}}
+\entry{neighbor peer prefix-list name [in|out]}{67}{\code {neighbor \var {peer} prefix-list \var {name} [in|out]}}
+\entry{neighbor peer filter-list name [in|out]}{67}{\code {neighbor \var {peer} filter-list \var {name} [in|out]}}
+\entry{neighbor peer route-map name [in|out]}{67}{\code {neighbor \var {peer} route-map \var {name} [in|out]}}
+\entry{neighbor word peer-group}{67}{\code {neighbor \var {word} peer-group}}
+\entry{neighbor peer peer-group word}{67}{\code {neighbor \var {peer} peer-group \var {word}}}
+\entry{show ip bgp vpnv4 all}{67}{\code {show ip bgp vpnv4 all}}
+\entry{show ipv6 bgp vpn all}{67}{\code {show ipv6 bgp vpn all}}
+\entry{show ip bgp encap all}{67}{\code {show ip bgp encap all}}
+\entry{show ipv6 bgp encap all}{67}{\code {show ipv6 bgp encap all}}
+\entry{show bgp ipv4 encap summary}{67}{\code {show bgp ipv4 encap summary}}
+\entry{show bgp ipv4 vpn summary}{67}{\code {show bgp ipv4 vpn summary}}
+\entry{show bgp ipv6 encap summary}{67}{\code {show bgp ipv6 encap summary}}
+\entry{show bgp ipv6 vpn summary}{67}{\code {show bgp ipv6 vpn summary}}
+\entry{show ip bgp regexp line}{68}{\code {show ip bgp regexp \var {line}}}
+\entry{ip as-path access-list word |apermit|deny|b line}{68}{\code {ip as-path access-list \var {word} {\tt \char 123}permit|deny{\tt \char 125} \var {line}}}
+\entry{no ip as-path access-list word}{68}{\code {no ip as-path access-list \var {word}}}
+\entry{no ip as-path access-list word |apermit|deny|b line}{68}{\code {no ip as-path access-list \var {word} {\tt \char 123}permit|deny{\tt \char 125} \var {line}}}
+\entry{match as-path word}{68}{\code {match as-path \var {word}}}
+\entry{set as-path prepend as-path}{68}{\code {set as-path prepend \var {as-path}}}
+\entry{set as-path prepend last-as num}{68}{\code {set as-path prepend last-as \var {num}}}
+\entry{ip community-list standard name |apermit|deny|b community}{69}{\code {ip community-list standard \var {name} {\tt \char 123}permit|deny{\tt \char 125} \var {community}}}
+\entry{ip community-list expanded name |apermit|deny|b line}{70}{\code {ip community-list expanded \var {name} {\tt \char 123}permit|deny{\tt \char 125} \var {line}}}
+\entry{no ip community-list name}{70}{\code {no ip community-list \var {name}}}
+\entry{no ip community-list standard name}{70}{\code {no ip community-list standard \var {name}}}
+\entry{no ip community-list expanded name}{70}{\code {no ip community-list expanded \var {name}}}
+\entry{show ip community-list}{70}{\code {show ip community-list}}
+\entry{show ip community-list name}{70}{\code {show ip community-list \var {name}}}
+\entry{ip community-list <1-99> |apermit|deny|b community}{70}{\code {ip community-list <1-99> {\tt \char 123}permit|deny{\tt \char 125} \var {community}}}
+\entry{ip community-list <100-199> |apermit|deny|b community}{70}{\code {ip community-list <100-199> {\tt \char 123}permit|deny{\tt \char 125} \var {community}}}
+\entry{ip community-list name |apermit|deny|b community}{71}{\code {ip community-list \var {name} {\tt \char 123}permit|deny{\tt \char 125} \var {community}}}
+\entry{match community word}{71}{\code {match community \var {word}}}
+\entry{match community word exact-match}{71}{\code {match community \var {word} exact-match}}
+\entry{set community none}{71}{\code {set community none}}
+\entry{set community community}{71}{\code {set community \var {community}}}
+\entry{set community community additive}{71}{\code {set community \var {community} additive}}
+\entry{set comm-list word delete}{71}{\code {set comm-list \var {word} delete}}
+\entry{show ip bgp community}{71}{\code {show ip bgp community}}
+\entry{show ip bgp community community}{71}{\code {show ip bgp community \var {community}}}
+\entry{show ip bgp community community exact-match}{71}{\code {show ip bgp community \var {community} exact-match}}
+\entry{show ip bgp community-list word}{72}{\code {show ip bgp community-list \var {word}}}
+\entry{show ip bgp community-list word exact-match}{72}{\code {show ip bgp community-list \var {word} exact-match}}
+\entry{ip extcommunity-list standard name |apermit|deny|b extcommunity}{74}{\code {ip extcommunity-list standard \var {name} {\tt \char 123}permit|deny{\tt \char 125} \var {extcommunity}}}
+\entry{ip extcommunity-list expanded name |apermit|deny|b line}{74}{\code {ip extcommunity-list expanded \var {name} {\tt \char 123}permit|deny{\tt \char 125} \var {line}}}
+\entry{no ip extcommunity-list name}{74}{\code {no ip extcommunity-list \var {name}}}
+\entry{no ip extcommunity-list standard name}{74}{\code {no ip extcommunity-list standard \var {name}}}
+\entry{no ip extcommunity-list expanded name}{74}{\code {no ip extcommunity-list expanded \var {name}}}
+\entry{show ip extcommunity-list}{75}{\code {show ip extcommunity-list}}
+\entry{show ip extcommunity-list name}{75}{\code {show ip extcommunity-list \var {name}}}
+\entry{match extcommunity word}{75}{\code {match extcommunity \var {word}}}
+\entry{set extcommunity rt extcommunity}{75}{\code {set extcommunity rt \var {extcommunity}}}
+\entry{set extcommunity soo extcommunity}{75}{\code {set extcommunity soo \var {extcommunity}}}
+\entry{show ip bgp}{75}{\code {show ip bgp}}
+\entry{show ip bgp A.B.C.D}{75}{\code {show ip bgp \var {A.B.C.D}}}
+\entry{show ip bgp X:X::X:X}{75}{\code {show ip bgp \var {X:X::X:X}}}
+\entry{show ip bgp regexp line}{75}{\code {show ip bgp regexp \var {line}}}
+\entry{show ip bgp community community}{75}{\code {show ip bgp community \var {community}}}
+\entry{show ip bgp community community exact-match}{75}{\code {show ip bgp community \var {community} exact-match}}
+\entry{show ip bgp community-list word}{75}{\code {show ip bgp community-list \var {word}}}
+\entry{show ip bgp community-list word exact-match}{75}{\code {show ip bgp community-list \var {word} exact-match}}
+\entry{show ip bgp summary}{76}{\code {show ip bgp summary}}
+\entry{show ip bgp neighbor [peer]}{76}{\code {show ip bgp neighbor [\var {peer}]}}
+\entry{clear ip bgp peer}{76}{\code {clear ip bgp \var {peer}}}
+\entry{clear ip bgp peer soft in}{76}{\code {clear ip bgp \var {peer} soft in}}
+\entry{show ip bgp dampened-paths}{76}{\code {show ip bgp dampened-paths}}
+\entry{show ip bgp flap-statistics}{76}{\code {show ip bgp flap-statistics}}
+\entry{show debug}{76}{\code {show debug}}
+\entry{debug event}{76}{\code {debug event}}
+\entry{debug update}{76}{\code {debug update}}
+\entry{debug keepalive}{76}{\code {debug keepalive}}
+\entry{no debug event}{76}{\code {no debug event}}
+\entry{no debug update}{76}{\code {no debug update}}
+\entry{no debug keepalive}{76}{\code {no debug keepalive}}
+\entry{neighbor peer strict-capability-match}{77}{\code {neighbor \var {peer} strict-capability-match}}
+\entry{no neighbor peer strict-capability-match}{77}{\code {no neighbor \var {peer} strict-capability-match}}
+\entry{neighbor peer dont-capability-negotiate}{77}{\code {neighbor \var {peer} dont-capability-negotiate}}
+\entry{no neighbor peer dont-capability-negotiate}{77}{\code {no neighbor \var {peer} dont-capability-negotiate}}
+\entry{neighbor peer override-capability}{77}{\code {neighbor \var {peer} override-capability}}
+\entry{no neighbor peer override-capability}{77}{\code {no neighbor \var {peer} override-capability}}
+\entry{bgp cluster-id a.b.c.d}{77}{\code {bgp cluster-id \var {a.b.c.d}}}
+\entry{neighbor peer route-reflector-client}{77}{\code {neighbor \var {peer} route-reflector-client}}
+\entry{no neighbor peer route-reflector-client}{77}{\code {no neighbor \var {peer} route-reflector-client}}
+\entry{bgp multiple-instance}{78}{\code {bgp multiple-instance}}
+\entry{no bgp multiple-instance}{78}{\code {no bgp multiple-instance}}
+\entry{bgp config-type cisco}{78}{\code {bgp config-type cisco}}
+\entry{bgp config-type zebra}{78}{\code {bgp config-type zebra}}
+\entry{router bgp as-number}{79}{\code {router bgp \var {as-number}}}
+\entry{router bgp as-number view name}{79}{\code {router bgp \var {as-number} view \var {name}}}
+\entry{show ip bgp view name}{80}{\code {show ip bgp view \var {name}}}
+\entry{dump bgp all path [interval]}{81}{\code {dump bgp all \var {path} [\var {interval}]}}
+\entry{dump bgp all-et path [interval]}{81}{\code {dump bgp all-et \var {path} [\var {interval}]}}
+\entry{no dump bgp all [path] [interval]}{81}{\code {no dump bgp all [\var {path}] [\var {interval}]}}
+\entry{dump bgp updates path [interval]}{82}{\code {dump bgp updates \var {path} [\var {interval}]}}
+\entry{dump bgp updates-et path [interval]}{82}{\code {dump bgp updates-et \var {path} [\var {interval}]}}
+\entry{no dump bgp updates [path] [interval]}{82}{\code {no dump bgp updates [\var {path}] [\var {interval}]}}
+\entry{dump bgp routes-mrt path}{82}{\code {dump bgp routes-mrt \var {path}}}
+\entry{dump bgp routes-mrt path interval}{82}{\code {dump bgp routes-mrt \var {path} \var {interval}}}
+\entry{no dump bgp route-mrt [path] [interval]}{82}{\code {no dump bgp route-mrt [\var {path}] [\var {interval}]}}
+\entry{neighbor peer-group route-server-client}{92}{\code {neighbor \var {peer-group} route-server-client}}
+\entry{neighbor A.B.C.D route-server-client}{92}{\code {neighbor \var {A.B.C.D} route-server-client}}
+\entry{neighbor X:X::X:X route-server-client}{92}{\code {neighbor \var {X:X::X:X} route-server-client}}
+\entry{neigbor |aA.B.C.D|X.X::X.X|peer-group|b route-map WORD |aimport|export|b}{93}{\code {neigbor {\tt \char 123}A.B.C.D|X.X::X.X|peer-group{\tt \char 125} route-map WORD {\tt \char 123}import|export{\tt \char 125}}}
+\entry{match peer |aA.B.C.D|X:X::X:X|b}{93}{\code {match peer {\tt \char 123}A.B.C.D|X:X::X:X{\tt \char 125}}}
+\entry{call WORD}{93}{\code {call \var {WORD}}}
+\entry{username username nopassword}{100}{\code {username \var {username} nopassword}}
+\entry{service integrated-vtysh-config}{100}{\code {service integrated-vtysh-config}}
+\entry{access-list name permit ipv4-network}{101}{\code {access-list \var {name} permit \var {ipv4-network}}}
+\entry{access-list name deny ipv4-network}{101}{\code {access-list \var {name} deny \var {ipv4-network}}}
+\entry{ip prefix-list name (permit|deny) prefix [le len] [ge len]}{101}{\code {ip prefix-list \var {name} (permit|deny) \var {prefix} [le \var {len}] [ge \var {len}]}}
+\entry{ip prefix-list name seq number (permit|deny) prefix [le len] [ge len]}{101}{\code {ip prefix-list \var {name} seq \var {number} (permit|deny) \var {prefix} [le \var {len}] [ge \var {len}]}}
+\entry{no ip prefix-list name}{102}{\code {no ip prefix-list \var {name}}}
+\entry{ip prefix-list name description desc}{102}{\code {ip prefix-list \var {name} description \var {desc}}}
+\entry{no ip prefix-list name description [desc]}{102}{\code {no ip prefix-list \var {name} description [\var {desc}]}}
+\entry{ip prefix-list sequence-number}{102}{\code {ip prefix-list sequence-number}}
+\entry{no ip prefix-list sequence-number}{102}{\code {no ip prefix-list sequence-number}}
+\entry{show ip prefix-list}{102}{\code {show ip prefix-list}}
+\entry{show ip prefix-list name}{102}{\code {show ip prefix-list \var {name}}}
+\entry{show ip prefix-list name seq num}{102}{\code {show ip prefix-list \var {name} seq \var {num}}}
+\entry{show ip prefix-list name a.b.c.d/m}{102}{\code {show ip prefix-list \var {name} \var {a.b.c.d/m}}}
+\entry{show ip prefix-list name a.b.c.d/m longer}{102}{\code {show ip prefix-list \var {name} \var {a.b.c.d/m} longer}}
+\entry{show ip prefix-list name a.b.c.d/m first-match}{102}{\code {show ip prefix-list \var {name} \var {a.b.c.d/m} first-match}}
+\entry{show ip prefix-list summary}{102}{\code {show ip prefix-list summary}}
+\entry{show ip prefix-list summary name}{103}{\code {show ip prefix-list summary \var {name}}}
+\entry{show ip prefix-list detail}{103}{\code {show ip prefix-list detail}}
+\entry{show ip prefix-list detail name}{103}{\code {show ip prefix-list detail \var {name}}}
+\entry{clear ip prefix-list}{103}{\code {clear ip prefix-list}}
+\entry{clear ip prefix-list name}{103}{\code {clear ip prefix-list \var {name}}}
+\entry{clear ip prefix-list name a.b.c.d/m}{103}{\code {clear ip prefix-list \var {name} \var {a.b.c.d/m}}}
+\entry{route-map route-map-name (permit|deny) order}{105}{\code {route-map \var {route-map-name} (permit|deny) \var {order}}}
+\entry{match ip address access_list}{105}{\code {match ip address \var {access_list}}}
+\entry{match ip next-hop ipv4_addr}{105}{\code {match ip next-hop \var {ipv4_addr}}}
+\entry{match aspath as_path}{105}{\code {match aspath \var {as_path}}}
+\entry{match metric metric}{105}{\code {match metric \var {metric}}}
+\entry{match community community_list}{105}{\code {match community \var {community_list}}}
+\entry{set ip next-hop ipv4_address}{106}{\code {set ip next-hop \var {ipv4_address}}}
+\entry{set local-preference local_pref}{106}{\code {set local-preference \var {local_pref}}}
+\entry{set weight weight}{106}{\code {set weight \var {weight}}}
+\entry{set metric metric}{106}{\code {set metric \var {metric}}}
+\entry{set as-path prepend as_path}{106}{\code {set as-path prepend \var {as_path}}}
+\entry{set community community}{106}{\code {set community \var {community}}}
+\entry{set ipv6 next-hop global ipv6_address}{106}{\code {set ipv6 next-hop global \var {ipv6_address}}}
+\entry{set ipv6 next-hop local ipv6_address}{106}{\code {set ipv6 next-hop local \var {ipv6_address}}}
+\entry{call name}{106}{\code {call \var {name}}}
+\entry{on-match next}{106}{\code {on-match next}}
+\entry{continue}{106}{\code {continue}}
+\entry{on-match goto N}{106}{\code {on-match goto \var {N}}}
+\entry{continue N}{106}{\code {continue \var {N}}}
+\entry{no ipv6 nd suppress-ra}{107}{\code {no ipv6 nd suppress-ra}}
+\entry{ipv6 nd suppress-ra}{107}{\code {ipv6 nd suppress-ra}}
+\entry{ipv6 nd prefix ipv6prefix [valid-lifetime] [preferred-lifetime] [off-link] [no-autoconfig] [router-address]}{107}{\code {ipv6 nd prefix \var {ipv6prefix} [\var {valid-lifetime}] [\var {preferred-lifetime}] [off-link] [no-autoconfig] [router-address]}}
+\entry{ipv6 nd ra-interval <1-1800>}{107}{\code {ipv6 nd ra-interval <1-1800>}}
+\entry{no ipv6 nd ra-interval [<1-1800>]}{107}{\code {no ipv6 nd ra-interval [<1-1800>]}}
+\entry{ipv6 nd ra-interval msec <70-1800000>}{108}{\code {ipv6 nd ra-interval msec <70-1800000>}}
+\entry{no ipv6 nd ra-interval [msec <70-1800000>]}{108}{\code {no ipv6 nd ra-interval [msec <70-1800000>]}}
+\entry{ipv6 nd ra-lifetime <0-9000>}{108}{\code {ipv6 nd ra-lifetime <0-9000>}}
+\entry{no ipv6 nd ra-lifetime [<0-9000>]}{108}{\code {no ipv6 nd ra-lifetime [<0-9000>]}}
+\entry{ipv6 nd reachable-time <1-3600000>}{108}{\code {ipv6 nd reachable-time <1-3600000>}}
+\entry{no ipv6 nd reachable-time [<1-3600000>]}{108}{\code {no ipv6 nd reachable-time [<1-3600000>]}}
+\entry{ipv6 nd managed-config-flag}{108}{\code {ipv6 nd managed-config-flag}}
+\entry{no ipv6 nd managed-config-flag}{108}{\code {no ipv6 nd managed-config-flag}}
+\entry{ipv6 nd other-config-flag}{108}{\code {ipv6 nd other-config-flag}}
+\entry{no ipv6 nd other-config-flag}{108}{\code {no ipv6 nd other-config-flag}}
+\entry{ipv6 nd home-agent-config-flag}{108}{\code {ipv6 nd home-agent-config-flag}}
+\entry{no ipv6 nd home-agent-config-flag}{108}{\code {no ipv6 nd home-agent-config-flag}}
+\entry{ipv6 nd home-agent-preference <0-65535>}{108}{\code {ipv6 nd home-agent-preference <0-65535>}}
+\entry{no ipv6 nd home-agent-preference [<0-65535>]}{108}{\code {no ipv6 nd home-agent-preference [<0-65535>]}}
+\entry{ipv6 nd home-agent-lifetime <0-65520>}{109}{\code {ipv6 nd home-agent-lifetime <0-65520>}}
+\entry{no ipv6 nd home-agent-lifetime [<0-65520>]}{109}{\code {no ipv6 nd home-agent-lifetime [<0-65520>]}}
+\entry{ipv6 nd adv-interval-option}{109}{\code {ipv6 nd adv-interval-option}}
+\entry{no ipv6 nd adv-interval-option}{109}{\code {no ipv6 nd adv-interval-option}}
+\entry{ipv6 nd router-preference (high|medium|low)}{109}{\code {ipv6 nd router-preference (high|medium|low)}}
+\entry{no ipv6 nd router-preference [(high|medium|low)]}{109}{\code {no ipv6 nd router-preference [(high|medium|low)]}}
+\entry{ipv6 nd mtu <1-65535>}{109}{\code {ipv6 nd mtu <1-65535>}}
+\entry{no ipv6 nd mtu [<1-65535>]}{109}{\code {no ipv6 nd mtu [<1-65535>]}}
+\entry{smux peer oid}{113}{\code {smux peer \var {oid}}}
+\entry{no smux peer oid}{113}{\code {no smux peer \var {oid}}}
+\entry{smux peer oid password}{113}{\code {smux peer \var {oid} \var {password}}}
+\entry{no smux peer oid password}{113}{\code {no smux peer \var {oid} \var {password}}}
+\entry{agentx}{113}{\code {agentx}}
+\entry{no agentx}{113}{\code {no agentx}}

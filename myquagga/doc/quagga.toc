@@ -1,0 +1,175 @@
+@numchapentry{Overview}{1}{Overview}{1}
+@numsecentry{About Quagga}{1.1}{About Quagga}{1}
+@numsecentry{System Architecture}{1.2}{System Architecture}{2}
+@numsecentry{Supported Platforms}{1.3}{Supported Platforms}{2}
+@numsecentry{Supported RFCs}{1.4}{Supported RFCs}{3}
+@numsecentry{How to get Quagga}{1.5}{How to get Quagga}{4}
+@numsecentry{Mailing List}{1.6}{Mailing List}{4}
+@numsecentry{Bug Reports}{1.7}{Bug Reports}{4}
+@numchapentry{Installation}{2}{Installation}{5}
+@numsecentry{Configure the Software}{2.1}{Configure the Software}{5}
+@numsubsecentry{The Configure script and its options}{2.1.1}{The Configure script and its options}{5}
+@numsubsecentry{Least-Privilege support}{2.1.2}{Least-Privilege support}{6}
+@numsubsecentry{Linux Notes}{2.1.3}{Linux notes}{7}
+@numsecentry{Build the Software}{2.2}{Build the Software}{8}
+@numsecentry{Install the Software}{2.3}{Install the Software}{8}
+@numchapentry{Basic commands}{3}{Basic commands}{10}
+@numsecentry{Config Commands}{3.1}{Config Commands}{10}
+@numsubsecentry{Basic Config Commands}{3.1.1}{Basic Config Commands}{10}
+@numsubsecentry{Sample Config File}{3.1.2}{Sample Config File}{13}
+@numsecentry{Terminal Mode Commands}{3.2}{Terminal Mode Commands}{13}
+@numsecentry{Common Invocation Options}{3.3}{Common Invocation Options}{14}
+@numsecentry{Virtual Terminal Interfaces}{3.4}{Virtual Terminal Interfaces}{14}
+@numsubsecentry{VTY Overview}{3.4.1}{VTY Overview}{14}
+@numsubsecentry{VTY Modes}{3.4.2}{VTY Modes}{15}
+@numsubsubsecentry{VTY View Mode}{3.4.2.1}{VTY View Mode}{15}
+@numsubsubsecentry{VTY Enable Mode}{3.4.2.2}{VTY Enable Mode}{15}
+@numsubsubsecentry{VTY Other Modes}{3.4.2.3}{VTY Other Modes}{15}
+@numsubsecentry{VTY CLI Commands}{3.4.3}{VTY CLI Commands}{16}
+@numsubsubsecentry{CLI Movement Commands}{3.4.3.1}{CLI Movement Commands}{16}
+@numsubsubsecentry{CLI Editing Commands}{3.4.3.2}{CLI Editing Commands}{16}
+@numsubsubsecentry{CLI Advanced Commands}{3.4.3.3}{CLI Advanced Commands}{16}
+@numchapentry{Zebra}{4}{Zebra}{17}
+@numsecentry{Invoking zebra}{4.1}{Invoking zebra}{17}
+@numsecentry{Interface Commands}{4.2}{Interface Commands}{17}
+@numsecentry{Static Route Commands}{4.3}{Static Route Commands}{18}
+@numsecentry{Multicast RIB Commands}{4.4}{Multicast RIB Commands}{19}
+@numsecentry{zebra Route Filtering}{4.5}{zebra Route Filtering}{20}
+@numsecentry{zebra FIB push interface}{4.6}{zebra FIB push interface}{21}
+@numsecentry{zebra Terminal Mode Commands}{4.7}{zebra Terminal Mode Commands}{22}
+@numchapentry{RIP}{5}{RIP}{23}
+@numsecentry{Starting and Stopping ripd}{5.1}{Starting and Stopping ripd}{23}
+@numsubsecentry{RIP netmask}{5.1.1}{RIP netmask}{23}
+@numsecentry{RIP Configuration}{5.2}{RIP Configuration}{24}
+@numsecentry{RIP Version Control}{5.3}{RIP Version Control}{25}
+@numsecentry{How to Announce RIP route}{5.4}{How to Announce RIP route}{26}
+@numsecentry{Filtering RIP Routes}{5.5}{Filtering RIP Routes}{27}
+@numsecentry{RIP Metric Manipulation}{5.6}{RIP Metric Manipulation}{27}
+@numsecentry{RIP distance}{5.7}{RIP distance}{27}
+@numsecentry{RIP route-map}{5.8}{RIP route-map}{28}
+@numsecentry{RIP Authentication}{5.9}{RIP Authentication}{29}
+@numsecentry{RIP Timers}{5.10}{RIP Timers}{30}
+@numsecentry{Show RIP Information}{5.11}{Show RIP Information}{30}
+@numsecentry{RIP Debug Commands}{5.12}{RIP Debug Commands}{31}
+@numchapentry{RIPng}{6}{RIPng}{32}
+@numsecentry{Invoking ripngd}{6.1}{Invoking ripngd}{32}
+@numsecentry{ripngd Configuration}{6.2}{ripngd Configuration}{32}
+@numsecentry{ripngd Terminal Mode Commands}{6.3}{ripngd Terminal Mode Commands}{32}
+@numsecentry{ripngd Filtering Commands}{6.4}{ripngd Filtering Commands}{32}
+@numchapentry{OSPFv2}{7}{OSPFv2}{33}
+@numsecentry{OSPF Fundamentals}{7.1}{OSPF Fundamentals}{33}
+@numsubsecentry{OSPF Mechanisms}{7.1.1}{}{33}
+@numsubsecentry{OSPF LSAs}{7.1.2}{}{35}
+@numsubsubsecentry{LSA Header}{7.1.2.1}{}{35}
+@numsubsubsecentry{Link-State LSAs}{7.1.2.2}{}{36}
+@numsubsubsecentry{Link-State LSA Examples}{7.1.2.3}{}{37}
+@numsubsubsecentry{External LSAs}{7.1.2.4}{}{39}
+@numsubsubsecentry{AS External LSA Example}{7.1.2.5}{}{40}
+@numsubsubsecentry{Summary LSAs}{7.1.2.6}{}{41}
+@numsubsecentry{OSPF Flooding}{7.1.3}{}{41}
+@numsubsecentry{OSPF Areas}{7.1.4}{}{41}
+@numsecentry{Configuring ospfd}{7.2}{Configuring ospfd}{42}
+@numsecentry{OSPF router}{7.3}{OSPF router}{42}
+@numsecentry{OSPF area}{7.4}{OSPF area}{45}
+@numsecentry{OSPF interface}{7.5}{OSPF interface}{48}
+@numsecentry{Redistribute routes to OSPF}{7.6}{Redistribute routes to OSPF}{49}
+@numsecentry{Showing OSPF information}{7.7}{Showing OSPF information}{51}
+@numsecentry{Debugging OSPF}{7.8}{Debugging OSPF}{52}
+@numsecentry{OSPF Configuration Examples}{7.9}{OSPF Configuration Examples}{52}
+@numchapentry{OSPFv3}{8}{OSPFv3}{54}
+@numsecentry{OSPF6 router}{8.1}{OSPF6 router}{54}
+@numsecentry{OSPF6 area}{8.2}{OSPF6 area}{55}
+@numsecentry{OSPF6 interface}{8.3}{OSPF6 interface}{55}
+@numsecentry{Redistribute routes to OSPF6}{8.4}{Redistribute routes to OSPF6}{55}
+@numsecentry{Showing OSPF6 information}{8.5}{Showing OSPF6 information}{55}
+@numsecentry{OSPF6 Configuration Examples}{8.6}{OSPF6 Configuration Examples}{56}
+@numchapentry{BGP}{9}{BGP}{57}
+@numsecentry{Starting BGP}{9.1}{Starting BGP}{57}
+@numsecentry{BGP router}{9.2}{BGP router}{57}
+@numsubsecentry{BGP distance}{9.2.1}{BGP distance}{58}
+@numsubsecentry{BGP decision process}{9.2.2}{BGP decision process}{58}
+@numsubsecentry{BGP route flap dampening}{9.2.3}{BGP route flap dampening}{59}
+@numsecentry{BGP MED}{9.3}{BGP MED}{60}
+@numsecentry{BGP network}{9.4}{BGP network}{64}
+@numsubsecentry{BGP route}{9.4.1}{BGP route}{64}
+@numsubsecentry{Route Aggregation}{9.4.2}{Route Aggregation}{64}
+@numsubsecentry{Redistribute to BGP}{9.4.3}{Redistribute to BGP}{64}
+@numsecentry{BGP Peer}{9.5}{BGP Peer}{64}
+@numsubsecentry{Defining Peer}{9.5.1}{Defining Peer}{65}
+@numsubsecentry{BGP Peer commands}{9.5.2}{BGP Peer commands}{65}
+@numsubsecentry{Peer filtering}{9.5.3}{Peer filtering}{67}
+@numsecentry{BGP Peer Group}{9.6}{BGP Peer Group}{67}
+@numsecentry{BGP Address Family}{9.7}{BGP Address Family}{67}
+@numsecentry{Autonomous System}{9.8}{Autonomous System}{67}
+@numsubsecentry{AS Path Regular Expression}{9.8.1}{AS Path Regular Expression}{68}
+@numsubsecentry{Display BGP Routes by AS Path}{9.8.2}{Display BGP Routes by AS Path}{68}
+@numsubsecentry{AS Path Access List}{9.8.3}{AS Path Access List}{68}
+@numsubsecentry{Using AS Path in Route Map}{9.8.4}{Using AS Path in Route Map}{68}
+@numsubsecentry{Private AS Numbers}{9.8.5}{Private AS Numbers}{68}
+@numsecentry{BGP Communities Attribute}{9.9}{BGP Communities Attribute}{69}
+@numsubsecentry{BGP Community Lists}{9.9.1}{BGP Community Lists}{69}
+@numsubsecentry{Numbered BGP Community Lists}{9.9.2}{Numbered BGP Community Lists}{70}
+@numsubsecentry{BGP Community in Route Map}{9.9.3}{BGP Community in Route Map}{71}
+@numsubsecentry{Display BGP Routes by Community}{9.9.4}{Display BGP Routes by Community}{71}
+@numsubsecentry{Using BGP Communities Attribute}{9.9.5}{Using BGP Communities Attribute}{72}
+@numsecentry{BGP Extended Communities Attribute}{9.10}{BGP Extended Communities Attribute}{74}
+@numsubsecentry{BGP Extended Community Lists}{9.10.1}{BGP Extended Community Lists}{74}
+@numsubsecentry{BGP Extended Communities in Route Map}{9.10.2}{BGP Extended Communities in Route Map}{75}
+@numsecentry{Displaying BGP Routes}{9.11}{Displaying BGP routes}{75}
+@numsubsecentry{Show IP BGP}{9.11.1}{Show IP BGP}{75}
+@numsubsecentry{More Show IP BGP}{9.11.2}{More Show IP BGP}{75}
+@numsecentry{Capability Negotiation}{9.12}{Capability Negotiation}{76}
+@numsecentry{Route Reflector}{9.13}{Route Reflector}{77}
+@numsecentry{Route Server}{9.14}{Route Server}{77}
+@numsubsecentry{Multiple instance}{9.14.1}{Multiple instance}{78}
+@numsubsecentry{BGP instance and view}{9.14.2}{BGP instance and view}{78}
+@numsubsecentry{Routing policy}{9.14.3}{Routing policy}{79}
+@numsubsecentry{Viewing the view}{9.14.4}{Viewing the view}{80}
+@numsecentry{How to set up a 6-Bone connection}{9.15}{How to set up a 6-Bone connection}{80}
+@numsecentry{Dump BGP packets and table}{9.16}{Dump BGP packets and table}{81}
+@numsecentry{BGP Configuration Examples}{9.17}{BGP Configuration Examples}{82}
+@numchapentry{Configuring Quagga as a Route Server}{10}{Configuring Quagga as a Route Server}{88}
+@numsecentry{Description of the Route Server model}{10.1}{Description of the Route Server model}{88}
+@numsecentry{Commands for configuring a Route Server}{10.2}{Commands for configuring a Route Server}{92}
+@numsecentry{Example of Route Server Configuration}{10.3}{Example of Route Server Configuration}{93}
+@numsubsecentry{Configuration of the BGP routers without Route Server}{10.3.1}{Configuration of the BGP routers without Route Server}{94}
+@numsubsecentry{Configuration of the BGP routers with Route Server}{10.3.2}{Configuration of the BGP routers with Route Server}{95}
+@numsubsecentry{Configuration of the Route Server itself}{10.3.3}{Configuration of the Route Server itself}{96}
+@numsubsecentry{Further considerations about Import and Export route-maps}{10.3.4}{Further considerations about Import and Export route-maps}{98}
+@numchapentry{VTY shell}{11}{VTY shell}{100}
+@numsecentry{VTY shell username}{11.1}{VTY shell username}{100}
+@numsecentry{VTY shell integrated configuration}{11.2}{VTY shell integrated configuration}{100}
+@numchapentry{Filtering}{12}{Filtering}{101}
+@numsecentry{IP Access List}{12.1}{IP Access List}{101}
+@numsecentry{IP Prefix List}{12.2}{IP Prefix List}{101}
+@numsubsecentry{ip prefix-list description}{12.2.1}{ip prefix-list description}{102}
+@numsubsecentry{ip prefix-list sequential number control}{12.2.2}{ip prefix-list sequential number control}{102}
+@numsubsecentry{Showing ip prefix-list}{12.2.3}{Showing ip prefix-list}{102}
+@numsubsecentry{Clear counter of ip prefix-list}{12.2.4}{Clear counter of ip prefix-list}{103}
+@numchapentry{Route Map}{13}{Route Map}{104}
+@numsecentry{Route Map Command}{13.1}{Route Map Command}{105}
+@numsecentry{Route Map Match Command}{13.2}{Route Map Match Command}{105}
+@numsecentry{Route Map Set Command}{13.3}{Route Map Set Command}{106}
+@numsecentry{Route Map Call Command}{13.4}{Route Map Call Command}{106}
+@numsecentry{Route Map Exit Action Command}{13.5}{Route Map Exit Action Command}{106}
+@numsecentry{Route Map Examples}{13.6}{Route Map Examples}{106}
+@numchapentry{IPv6 Support}{14}{IPv6 Support}{107}
+@numsecentry{Router Advertisement}{14.1}{Router Advertisement}{107}
+@numchapentry{Kernel Interface}{15}{Kernel Interface}{110}
+@numchapentry{SNMP Support}{16}{SNMP Support}{111}
+@numsecentry{Getting and installing an SNMP agent}{16.1}{Getting and installing an SNMP agent}{111}
+@numsecentry{AgentX configuration}{16.2}{AgentX configuration}{111}
+@numsecentry{SMUX configuration}{16.3}{SMUX configuration}{112}
+@numsecentry{MIB and command reference}{16.4}{MIB and command reference}{113}
+@numsecentry{Handling SNMP Traps}{16.5}{Handling SNMP Traps}{113}
+@appentry{Zebra Protocol}{A}{Zebra Protocol}{118}
+@appsecentry{Overview of the Zebra Protocol}{A.1}{}{118}
+@appsecentry{Zebra Protocol Definition}{A.2}{}{118}
+@appsubsecentry{Zebra Protocol Header (version 0)}{A.2.1}{}{118}
+@appsubsecentry{Zebra Protocol Common Header (version 1)}{A.2.2}{}{118}
+@appsubsecentry{Zebra Protocol Header Field Definitions}{A.2.3}{}{118}
+@appsubsecentry{Zebra Protocol Commands}{A.2.4}{}{119}
+@appentry{Packet Binary Dump Format}{B}{Packet Binary Dump Format}{120}
+@unnchapentry{Command Index}{10001}{Command Index}{125}
+@unnchapentry{VTY Key Index}{10002}{VTY Key Index}{132}
+@unnchapentry{Index}{10003}{Index}{133}

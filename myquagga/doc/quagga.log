@@ -1,0 +1,549 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdfetex 2016.8.4)  12 AUG 2016 11:00
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\nonstopmode \input ./quagga.texi
+(./quagga.texi (./texinfo.tex Loading texinfo [version 2013-02-01.11]:
+\bindingoffset=\dimen16
+\normaloffset=\dimen17
+\pagewidth=\dimen18
+\pageheight=\dimen19
+\outerhsize=\dimen20
+\outervsize=\dimen21
+\cornerlong=\dimen22
+\cornerthick=\dimen23
+\topandbottommargin=\dimen24
+\headlinebox=\box16
+\footlinebox=\box17
+\margin=\insert252
+\EMsimple=\toks13
+\groupbox=\box18
+\groupinvalidhelp=\toks14
+\mil=\dimen25
+\exdentamount=\skip18
+\inmarginspacing=\skip19
+\centerpenalty=\count27
+ pdf,
+\tempnum=\count28
+\lnkcount=\count29
+\filename=\toks15
+\filenamelength=\count30
+\pgn=\count31
+\toksA=\toks16
+\toksB=\toks17
+\toksC=\toks18
+\toksD=\toks19
+\boxA=\box19
+\countA=\count32
+\nopdfimagehelp=\toks20
+
+fonts,
+\sffam=\fam8
+\textleading=\dimen26
+ markup,
+\fontdepth=\count33
+ glyphs,
+\errorbox=\box20
+ page headings,
+\titlepagetopglue=\skip20
+\titlepagebottomglue=\skip21
+\evenheadline=\toks21
+\oddheadline=\toks22
+\evenfootline=\toks23
+\oddfootline=\toks24
+ tables,
+\tableindent=\dimen27
+\itemindent=\dimen28
+\itemmargin=\dimen29
+\itemmax=\dimen30
+\itemno=\count34
+\multitableparskip=\skip22
+\multitableparindent=\skip23
+\multitablecolspace=\dimen31
+\multitablelinespace=\skip24
+\colcount=\count35
+\everytab=\toks25
+ conditionals,
+\doignorecount=\count36
+ indexing,
+\whatsitskip=\skip25
+\whatsitpenalty=\count37
+\secondaryindent=\skip26
+\partialpage=\box21
+\doublecolumnhsize=\dimen32
+
+sectioning,
+\unnumberedno=\count38
+\chapno=\count39
+\secno=\count40
+\subsecno=\count41
+\subsubsecno=\count42
+\appendixno=\count43
+\absseclevel=\count44
+\secbase=\count45
+\chapheadingskip=\skip27
+\secheadingskip=\skip28
+\subsecheadingskip=\skip29
+ toc,
+\tocfile=\write0
+\contentsrightmargin=\skip30
+\savepageno=\count46
+\lastnegativepageno=\count47
+\tocindent=\dimen33
+ environments,
+\lispnarrowing=\skip31
+\envskipamount=\skip32
+\circthick=\dimen34
+\cartouter=\dimen35
+\cartinner=\dimen36
+\normbskip=\skip33
+\normpskip=\skip34
+\normlskip=\skip35
+\lskip=\skip36
+\rskip=\skip37
+\nonfillparindent=\dimen37
+\tabw=\dimen38
+\verbbox=\box22
+ defuns,
+\defbodyindent=\skip38
+\defargsindent=\skip39
+\deflastargmargin=\skip40
+\defunpenalty=\count48
+\parencount=\count49
+\brackcount=\count50
+ macros,
+\paramno=\count51
+\macname=\toks26
+ cross references,
+\auxfile=\write1
+\savesfregister=\count52
+\toprefbox=\box23
+\printedrefnamebox=\box24
+\infofilenamebox=\box25
+\printedmanualbox=\box26
+ insertions,
+\footnoteno=\count53
+\SAVEfootins=\box27
+\SAVEmargin=\box28
+
+(/usr/share/texlive/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen39
+\epsfframethickness=\dimen40
+\epsfrsize=\dimen41
+\epsftmp=\dimen42
+\epsftsize=\dimen43
+\epsfxsize=\dimen44
+\epsfysize=\dimen45
+\pspoints=\dimen46
+)
+\noepsfhelp=\toks27
+ localization,
+\nolanghelp=\toks28
+\countUTFx=\count54
+\countUTFy=\count55
+\countUTFz=\count56
+ formatting,
+\defaultparindent=\dimen47
+ and turning on texinfo input format.) (./quagga.aux)
+\openout1 = `quagga.aux'.
+
+@cpindfile=@write2
+@fnindfile=@write3
+@vrindfile=@write4
+@tpindfile=@write5
+@kyindfile=@write6
+@pgindfile=@write7
+texinfo.tex: doing @include of defines.texi
+
+ (./defines.texi)
+texinfo.tex: doing @include of version.texi
+
+ (./version.texi) [1
+\openout2 = `quagga.cp'.
+
+\openout3 = `quagga.fn'.
+
+\openout4 = `quagga.vr'.
+
+\openout5 = `quagga.tp'.
+
+\openout6 = `quagga.ky'.
+
+\openout7 = `quagga.pg'.
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./quagga.toc [-1] [-2
+] [-3] [-4]) [-5] (./quagga.toc)
+(./quagga.toc)
+texinfo.tex: doing @include of overview.texi
+
+ (./overview.texi Chapter 1
+\openout0 = `quagga.toc'.
+
+ [1] [2] [3])
+texinfo.tex: doing @include of install.texi
+
+ (./install.texi
+Chapter 2 [4] [5] [6] [7])
+texinfo.tex: doing @include of basic.texi
+
+ (./basic.texi Chapter 3 [8] [9] [10] [11] [12]
+[13] [14] [15])
+texinfo.tex: doing @include of main.texi
+
+ (./main.texi Chapter 4 [16] [17] [18] [19] [20]
+Overfull \hbox (26.43913pt too wide) in paragraph at lines 298--298
+ []@texttt The following creates a prefix-list that matches all addresses, a ro
+ute-map[] |
+
+@hbox(6.69167+2.43333)x433.62
+.@glue(@leftskip) 28.90755
+.@hbox(0.0+0.0)x0.0
+.@texttt T
+.@texttt h
+.@texttt e
+.etc.
+
+[21])
+texinfo.tex: doing @include of ripd.texi
+
+ (./ripd.texi Chapter 5 [22] [23] [24] [25] [26] [27] [28] [29] [30])
+texinfo.tex: doing @include of ripngd.texi
+
+
+(./ripngd.texi Chapter 6 [31])
+texinfo.tex: doing @include of ospfd.texi
+
+ (./ospfd.texi Chapter 7 [32]
+texinfo.tex: doing @include of ospf_fundamentals.texi
+
+
+(./ospf_fundamentals.texi [33] [34] [35] [36] [37] [38] [39] [40]) [41]
+[42] [43] [44] [45] [46] [47] [48] [49] [50] [51])
+texinfo.tex: doing @include of ospf6d.texi
+
+ (./ospf6d.texi Chapter 8
+[52] [53] [54] [55])
+texinfo.tex: doing @include of bgpd.texi
+
+ (./bgpd.texi Chapter 9 [56] [57] [58] [59] [60] [61]
+[62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
+Overfull \hbox (43.6852pt too wide) in paragraph at lines 1338--1338
+ []@texttt Status codes: s suppressed, d damped, h history, * valid, > best, i 
+- internal[] |
+
+@hbox(6.69167+2.43333)x433.62
+.@glue(@leftskip) 28.90755
+.@hbox(0.0+0.0)x0.0
+.@texttt S
+.@texttt t
+.@texttt a
+.etc.
+
+[75] [76] [77] [78] [79] [80]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [81]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+ [82] [83] [84] [85] [86])
+texinfo.tex: doing @include of routeserver.texi
+
+
+(./routeserver.texi Chapter 10 [87]
+@Figurefloatno=@count57
+ <./fig-normal-processing.pdf> <./fig_topologies_full.pdf> [88] <./fig_topologi
+es_rs.pdf> [89] [90] <./fig-rs-processing.pdf>
+Overfull \hbox (16.38pt too wide) in paragraph at lines 176--176
+[] |
+
+@hbox(470.9086+0.0)x433.62
+.@pdfrefximage(470.9086+0.0)x450.0
+.@penalty 10000
+.@glue(@parfillskip) 0.0 plus 1.0fil
+.@glue(@rightskip) 0.0
+.@rule(*+*)x5.0
+
+[91] [92] [93]
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 293--293
+[]@texttt ipv6 prefix-list COMMON-PREFIXES seq  5 permit 2001:0DB8:0000::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 296--296
+[]@texttt ipv6 prefix-list PEER-A-PREFIXES seq  5 permit 2001:0DB8:AAAA::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 299--299
+[]@texttt ipv6 prefix-list PEER-B-PREFIXES seq  5 permit 2001:0DB8:BBBB::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 302--302
+[]@texttt ipv6 prefix-list PEER-C-PREFIXES seq  5 permit 2001:0DB8:CCCC::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+[94] [95]
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 411--411
+[]@texttt ipv6 prefix-list COMMON-PREFIXES seq  5 permit 2001:0DB8:0000::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+[96]
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 414--414
+[]@texttt ipv6 prefix-list PEER-A-PREFIXES seq  5 permit 2001:0DB8:AAAA::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 417--417
+[]@texttt ipv6 prefix-list PEER-B-PREFIXES seq  5 permit 2001:0DB8:BBBB::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+
+Overfull \hbox (14.77765pt too wide) in paragraph at lines 420--420
+[]@texttt ipv6 prefix-list PEER-C-PREFIXES seq  5 permit 2001:0DB8:CCCC::/48 ge
+ 64 le 64[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt i
+.@texttt p
+.@texttt v
+.@texttt 6
+.etc.
+
+[97] [98])
+texinfo.tex: doing @include of vtysh.texi
+
+ (./vtysh.texi Chapter 11 [99])
+texinfo.tex: doing @include of filter.texi
+
+ (./filter.texi Chapter 12 [100]
+[101] [102])
+texinfo.tex: doing @include of routemap.texi
+
+ (./routemap.texi Chapter 13 [103] [104] [105])
+texinfo.tex: doing @include of ipv6.texi
+
+ (./ipv6.texi
+Chapter 14 [106] [107] [108])
+texinfo.tex: doing @include of kernel.texi
+
+ (./kernel.texi Chapter 15 [109])
+texinfo.tex: doing @include of snmp.texi
+
+ (./snmp.texi
+Chapter 16 [110]
+Overfull \hbox (66.51584pt too wide) in paragraph at lines 68--68
+[]@texttt 2012/05/25 11:39:08 ZEBRA: snmp[info]: NET-SNMP version 5.4.3 AgentX 
+subagent connected[] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@texttt 2
+.@texttt 0
+.@texttt 1
+.@texttt 2
+.etc.
+
+[111] [112]
+texinfo.tex: doing @include of snmptrap.texi
+
+ (./snmptrap.texi [113]
+Overfull \hbox (32.02371pt too wide) in paragraph at lines 205--205
+[][] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@hbox(7.60416+2.43333)x465.6437
+..@penalty 10000
+..@glue 5.74869
+..@penalty 10000
+..@glue 5.74869
+..@texttt p
+..etc.
+.@penalty 10000
+.@glue(@parfillskip) 0.0 plus 1.0fil
+.@glue(@rightskip) 0.0
+.etc.
+
+
+Overfull \hbox (129.7514pt too wide) in paragraph at lines 205--205
+[][] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@hbox(7.60416+2.43333)x563.3714
+..@penalty 10000
+..@glue 5.74869
+..@penalty 10000
+..@glue 5.74869
+..@texttt r
+..etc.
+.@penalty 10000
+.@glue(@parfillskip) 0.0 plus 1.0fil
+.@glue(@rightskip) 0.0
+.etc.
+
+[114]
+Overfull \hbox (32.02371pt too wide) in paragraph at lines 205--205
+[][] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@hbox(7.60416+2.43333)x465.6437
+..@penalty 10000
+..@glue 5.74869
+..@penalty 10000
+..@glue 5.74869
+..@texttt W
+..etc.
+.@penalty 10000
+.@glue(@parfillskip) 0.0 plus 1.0fil
+.@glue(@rightskip) 0.0
+.etc.
+
+
+Overfull \hbox (175.7409pt too wide) in paragraph at lines 205--205
+[][] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@hbox(7.60416+2.43333)x609.3609
+..@penalty 10000
+..@glue 5.74869
+..@penalty 10000
+..@glue 5.74869
+..@texttt a
+..etc.
+.@penalty 10000
+.@glue(@parfillskip) 0.0 plus 1.0fil
+.@glue(@rightskip) 0.0
+.etc.
+
+
+Overfull \hbox (158.49484pt too wide) in paragraph at lines 205--205
+[][] |
+
+@hbox(7.60416+2.43333)x433.62
+.@hbox(0.0+0.0)x0.0
+.@hbox(7.60416+2.43333)x592.11484
+..@penalty 10000
+..@glue 5.74869
+..@penalty 10000
+..@glue 5.74869
+..@texttt a
+..etc.
+.@penalty 10000
+.@glue(@parfillskip) 0.0 plus 1.0fil
+.@glue(@rightskip) 0.0
+.etc.
+
+[115] [116]))
+texinfo.tex: doing @include of protocol.texi
+
+ (./protocol.texi Appendix A [117] [118])
+texinfo.tex: doing @include of appendix.texi
+
+ (./appendix.texi
+Appendix B [119] [120] [121] [122] [123]) (Command Index) [124] (./quagga.fns
+[125] [126] [127] [128] [129] [130]) (VTY Key Index) [131] (./quagga.kys)
+(Index) [132] (./quagga.cps) [133] ) 
+Here is how much of TeX's memory you used:
+ 3030 strings out of 497114
+ 45286 string characters out of 6206953
+ 107347 words of memory out of 5000000
+ 3730 multiletter control sequences out of 15000+600000
+ 32896 words of font info for 113 fonts, out of 8000000 for 9000
+ 51 hyphenation exceptions out of 8191
+ 19i,7n,16p,311b,1126s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/i2rs/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1095.603pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on quagga.pdf (140 pages, 724958 bytes).
+PDF statistics:
+ 2442 PDF objects out of 2487 (max. 8388607)
+ 2247 compressed objects within 23 object streams
+ 326 named destinations out of 1000 (max. 500000)
+ 1433 words of extra memory for PDF output out of 10000 (max. 10000000)
+
