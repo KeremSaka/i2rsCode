@@ -39,7 +39,6 @@
 #include "zebra/connected.h"
 
 #include "ripd/ripd.h"
-#include "ripd/rip_debug.h"
 #include "ripd/rip_interface.h"
 
 /* static prototypes */
@@ -159,9 +158,6 @@ rip_request_interface_send (struct interface *ifp, u_char version)
   if (version == RIPv2 && if_is_multicast (ifp))
     {
       
-      if (IS_RIP_DEBUG_EVENT)
-	zlog_debug ("multicast request on %s", ifp->name);
-
       rip_request_send (NULL, ifp, version, NULL);
       return;
     }
@@ -172,9 +168,7 @@ rip_request_interface_send (struct interface *ifp, u_char version)
       struct listnode *cnode, *cnnode;
       struct connected *connected;
 
-      if (IS_RIP_DEBUG_EVENT)
-	zlog_debug ("broadcast request to %s", ifp->name);
-
+      
       for (ALL_LIST_ELEMENTS (ifp->connected, cnode, cnnode, connected))
 	{
 	  if (connected->address->family == AF_INET)
@@ -193,9 +187,7 @@ rip_request_interface_send (struct interface *ifp, u_char version)
 		/* do not know where to send the packet */
 	        continue;
 
-	      if (IS_RIP_DEBUG_EVENT)
-		zlog_debug ("SEND request to %s", inet_ntoa (to.sin_addr));
-	      
+	       
 	      rip_request_send (&to, ifp, version, connected);
 	    }
 	}
@@ -255,9 +247,7 @@ rip_request_neighbor_all (void)
   if (! rip)
     return;
 
-  if (IS_RIP_DEBUG_EVENT)
-    zlog_debug ("request to the all neighbor");
-
+  
   /* Send request to all neighbor. */
   for (rp = route_top (rip->neighbor); rp; rp = route_next (rp))
     if (rp->info)
@@ -274,9 +264,7 @@ rip_multicast_join (struct interface *ifp, int sock)
 
   if (if_is_operative (ifp) && if_is_multicast (ifp))
     {
-      if (IS_RIP_DEBUG_EVENT)
-	zlog_debug ("multicast join at %s", ifp->name);
-
+      
       for (ALL_LIST_ELEMENTS_RO (ifp->connected, cnode, ifc))
 	{
 	  struct prefix_ipv4 *p;
@@ -306,9 +294,7 @@ rip_multicast_leave (struct interface *ifp, int sock)
 
   if (if_is_up (ifp) && if_is_multicast (ifp))
     {
-      if (IS_RIP_DEBUG_EVENT)
-	zlog_debug ("multicast leave from %s", ifp->name);
-
+      
       for (ALL_LIST_ELEMENTS_RO (ifp->connected, cnode, connected))
 	{
 	  struct prefix_ipv4 *p;
@@ -397,11 +383,7 @@ rip_interface_down (int command, struct zclient *zclient, zebra_size_t length,
 
   rip_if_down(ifp);
  
-  if (IS_RIP_DEBUG_ZEBRA)
-    zlog_debug ("interface %s index %d flags %llx metric %d mtu %d is down",
-	       ifp->name, ifp->ifindex, (unsigned long long)ifp->flags,
-	       ifp->metric, ifp->mtu);
-
+  
   return 0;
 }
 
@@ -418,11 +400,6 @@ rip_interface_up (int command, struct zclient *zclient, zebra_size_t length,
 
   if (ifp == NULL)
     return 0;
-
-  if (IS_RIP_DEBUG_ZEBRA)
-    zlog_debug ("interface %s index %d flags %#llx metric %d mtu %d is up",
-	       ifp->name, ifp->ifindex, (unsigned long long) ifp->flags,
-	       ifp->metric, ifp->mtu);
 
   /* Check if this interface is RIP enabled or not.*/
   rip_enable_apply (ifp);
@@ -445,11 +422,7 @@ rip_interface_add (int command, struct zclient *zclient, zebra_size_t length,
 
   ifp = zebra_interface_add_read (zclient->ibuf, vrf_id);
 
-  if (IS_RIP_DEBUG_ZEBRA)
-    zlog_debug ("interface add %s index %d flags %#llx metric %d mtu %d",
-		ifp->name, ifp->ifindex, (unsigned long long) ifp->flags,
-		ifp->metric, ifp->mtu);
-
+  
   /* Check if this interface is RIP enabled or not.*/
   rip_enable_apply (ifp);
  
@@ -593,9 +566,7 @@ rip_if_down(struct interface *ifp)
   
   if (ri->running)
    {
-     if (IS_RIP_DEBUG_EVENT)
-       zlog_debug ("turn off %s", ifp->name);
-
+     
      /* Leave from multicast group. */
      rip_multicast_leave (ifp, rip->sock);
 
@@ -662,10 +633,7 @@ rip_interface_address_add (int command, struct zclient *zclient,
 
   if (p->family == AF_INET)
     {
-      if (IS_RIP_DEBUG_ZEBRA)
-	zlog_debug ("connected address %s/%d is added", 
-		   inet_ntoa (p->u.prefix4), p->prefixlen);
-
+      
       rip_enable_apply(ifc->ifp);
       /* Check if this prefix needs to be redistributed */
       rip_apply_address_add(ifc);
@@ -716,9 +684,7 @@ rip_interface_address_delete (int command, struct zclient *zclient,
       p = ifc->address;
       if (p->family == AF_INET)
 	{
-	  if (IS_RIP_DEBUG_ZEBRA)
-	    zlog_debug ("connected address %s/%d is deleted",
-		       inet_ntoa (p->u.prefix4), p->prefixlen);
+	  
 
 #ifdef HAVE_SNMP
 	  rip_ifaddr_delete (ifc->ifp, ifc);
@@ -1005,8 +971,7 @@ rip_enable_apply (struct interface *ifp)
   if (ri->enable_network || ri->enable_interface)
     {
 	{
-	  if (IS_RIP_DEBUG_EVENT)
-	    zlog_debug ("turn on %s", ifp->name);
+	  
 
 	  /* Add interface wake up thread. */
 	  if (! ri->t_wakeup)
@@ -1148,8 +1113,7 @@ rip_passive_interface_apply (struct interface *ifp)
   ri->passive = ((rip_passive_nondefault_lookup (ifp->name) < 0) ?
 		 passive_default : !passive_default);
 
-  if (IS_RIP_DEBUG_ZEBRA)
-    zlog_debug ("interface %s: passive = %d",ifp->name,ri->passive);
+  
 }
 
 static void
