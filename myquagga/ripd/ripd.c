@@ -524,7 +524,7 @@ rip_rte_process (struct rte *rte, struct sockaddr_in *from,
      arrived. If the result is greater than infinity, use infinity
      (RFC2453 Sec. 3.9.2) */
   /* Zebra ripd can handle offset-list in. */
-  ret = rip_offset_list_apply_in (&p, ifp, &rte->metric);
+  
 
   /* If offset-list does not modify the metric use interface's
      metric. */
@@ -2213,9 +2213,7 @@ rip_output_process (struct connected *ifc, struct sockaddr_in *to,
 	  }
 
 	/* Apply offset-list */
-	if (rinfo->metric != RIP_METRIC_INFINITY)
-	  rip_offset_list_apply_out (p, ifc->ifp, &rinfo->metric_out);
-
+	
 	if (rinfo->metric_out > RIP_METRIC_INFINITY)
 	  rinfo->metric_out = RIP_METRIC_INFINITY;
 
@@ -3573,7 +3571,7 @@ config_write_rip (struct vty *vty)
       config_write_rip_redistribute (vty, 1);
 
       /* RIP offset-list configuration. */
-      config_write_rip_offset_list (vty);
+     
 
       /* RIP enabled network and interface configuration. */
       config_write_rip_network (vty, 1);
@@ -3800,7 +3798,7 @@ rip_clean (void)
 
   rip_clean_network ();
   rip_passive_nondefault_clean ();
-  rip_offset_clean ();
+  
   rip_interface_clean ();
   rip_distance_reset ();
   rip_redistribute_clean ();
@@ -3968,7 +3966,7 @@ rip_init (void)
 
   /* Route-map */
   rip_route_map_init ();
-  rip_offset_init ();
+  
 
   route_map_add_hook (rip_routemap_update);
   route_map_delete_hook (rip_routemap_update);
