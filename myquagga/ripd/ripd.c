@@ -1433,7 +1433,7 @@ rip_send_packet (u_char * buf, int size, struct sockaddr_in *to,
           zlog_warn("rip_send_packet could not create socket.");
           return -1;
         }
-      rip_interface_multicast_set (send_sock, ifc);
+      //rip_interface_multicast_set (send_sock, ifc);
     }
 
   ret = sendto (send_sock, buf, size, 0, (struct sockaddr *)&sin,
@@ -1749,11 +1749,11 @@ rip_read (struct thread *t)
     }
 
   /* Check is this packet comming from myself? */
-  if (if_check_address (from.sin_addr)) 
+  /*if (if_check_address (from.sin_addr)) 
     {
      return -1;
     }
-
+*/
   /* Which interface is this packet comes from. */
   ifp = if_lookup_address (from.sin_addr);
   
@@ -1825,7 +1825,7 @@ rip_read (struct thread *t)
 
   /* Is RIP running or is this RIP neighbor ?*/
   ri = ifp->info;
-  if (! ri->running && ! rip_neighbor_lookup (&from))
+  if (! ri->running /*&& ! rip_neighbor_lookup (&from)*/)
     {
       rip_peer_bad_packet (&from);
       return -1;
@@ -3430,7 +3430,7 @@ DEFUN (show_ip_rip_status,
   struct listnode *node;
   struct interface *ifp;
   struct rip_interface *ri;
-  extern const struct message ri_version_msg[];
+  //extern const struct message ri_version_msg[];
   const char *send_version;
   const char *receive_version;
 
@@ -3459,14 +3459,14 @@ DEFUN (show_ip_rip_status,
   config_write_rip_redistribute (vty, 0);
   vty_out (vty, "%s", VTY_NEWLINE);
 
-  vty_out (vty, "  Default version control: send version %s,",
+/*  vty_out (vty, "  Default version control: send version %s,",
 	   lookup(ri_version_msg,rip->version_send));
-  if (rip->version_recv == RI_RIP_VERSION_1_AND_2)
+ */ if (rip->version_recv == RI_RIP_VERSION_1_AND_2)
     vty_out (vty, " receive any version %s", VTY_NEWLINE);
-  else
+  /*else
     vty_out (vty, " receive version %s %s",
 	     lookup(ri_version_msg,rip->version_recv), VTY_NEWLINE);
-
+*/
   vty_out (vty, "    Interface        Send  Recv   Key-chain%s", VTY_NEWLINE);
 
   for (ALL_LIST_ELEMENTS_RO (iflist, node, ifp))
@@ -3478,7 +3478,7 @@ DEFUN (show_ip_rip_status,
 
       if (ri->enable_network || ri->enable_interface)
 	{
-	  if (ri->ri_send == RI_RIP_UNSPEC)
+	 /* if (ri->ri_send == RI_RIP_UNSPEC)
 	    send_version = lookup (ri_version_msg, rip->version_send);
 	  else
 	    send_version = lookup (ri_version_msg, ri->ri_send);
@@ -3487,7 +3487,7 @@ DEFUN (show_ip_rip_status,
 	    receive_version = lookup (ri_version_msg, rip->version_recv);
 	  else
 	    receive_version = lookup (ri_version_msg, ri->ri_receive);
-	
+*/	
 	  vty_out (vty, "    %-17s%-3s   %-3s    %s%s", ifp->name,
 		   send_version,
 		   receive_version,
@@ -3497,7 +3497,7 @@ DEFUN (show_ip_rip_status,
     }
 
   vty_out (vty, "  Routing for Networks:%s", VTY_NEWLINE);
-  config_write_rip_network (vty, 0);  
+  //config_write_rip_network (vty, 0);  
 
   {
     int found_passive = 0;
@@ -3574,7 +3574,7 @@ config_write_rip (struct vty *vty)
      
 
       /* RIP enabled network and interface configuration. */
-      config_write_rip_network (vty, 1);
+      //config_write_rip_network (vty, 1);
 			
       /* RIP default metric configuration */
       if (rip->default_metric != RIP_DEFAULT_METRIC_DEFAULT)
@@ -3796,10 +3796,10 @@ rip_clean (void)
       rip = NULL;
     }
 
-  rip_clean_network ();
-  rip_passive_nondefault_clean ();
+  //rip_clean_network ();
+  //rip_passive_nondefault_clean ();
   
-  rip_interface_clean ();
+  //rip_interface_clean ();
   rip_distance_reset ();
   rip_redistribute_clean ();
 }
@@ -3822,7 +3822,7 @@ rip_reset (void)
 
   distribute_list_reset ();
 
-  rip_interface_reset ();
+  //rip_interface_reset ();
   rip_distance_reset ();
 
   rip_zclient_reset ();

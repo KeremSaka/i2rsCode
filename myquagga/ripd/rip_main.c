@@ -285,7 +285,7 @@ main (int argc, char **argv)
 
   /* RIP related initialization. */
   rip_init ();
-  rip_if_init ();
+  //rip_if_init ();
   rip_zclient_init (master);
   rip_peer_init ();
 
