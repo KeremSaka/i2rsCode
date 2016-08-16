@@ -1091,32 +1091,20 @@ rip_response_process (struct rip_packet *packet, int size,
 
   /* The Response must be ignored if it is not from the RIP
      port. (RFC2453 - Sec. 3.9.2)*/
-  if (from->sin_port != htons(RIP_PORT_DEFAULT))
-    {
-      zlog_info ("response doesn't come from RIP port: %d",
-		 from->sin_port);
-      rip_peer_bad_packet (from);
-      return;
-    }
+  
 
   /* The datagram's IPv4 source address should be checked to see
      whether the datagram is from a valid neighbor; the source of the
      datagram must be on a directly connected network (RFC2453 - Sec. 3.9.2) */
-  if (if_lookup_address(from->sin_addr) == NULL) 
-    {
-      zlog_info ("This datagram doesn't came from a valid neighbor: %s",
-		 inet_ntoa (from->sin_addr));
-      rip_peer_bad_packet (from);
-      return;
-    }
+  
 
   /* It is also worth checking to see whether the response is from one
      of the router's own addresses. */
 
-  ; /* Alredy done in rip_read () */
+   /* Alredy done in rip_read () */
 
   /* Update RIP peer. */
-  rip_peer_update (from, packet->version);
+  
 
   /* Set RTE pointer. */
   rte = packet->rte;
@@ -1144,33 +1132,13 @@ rip_response_process (struct rip_packet *packet, int size,
 
       /* - is the destination address valid (e.g., unicast; not net 0
          or 127) */
-      if (! rip_destination_check (rte->prefix))
-        {
-	  zlog_info ("Network is net 0 or net 127 or it is not unicast network");
-	  rip_peer_bad_route (from);
-	  continue;
-	} 
+      
 
       /* Convert metric value to host byte order. */
       rte->metric = ntohl (rte->metric);
 
       /* - is the metric valid (i.e., between 1 and 16, inclusive) */
-      if (! (rte->metric >= 1 && rte->metric <= 16))
-	{
-	  zlog_info ("Route's metric is not in the 1-16 range.");
-	  rip_peer_bad_route (from);
-	  continue;
-	}
-
       /* RIPv1 does not have nexthop value. */
-      if (packet->version == RIPv1 && rte->nexthop.s_addr != 0)
-	{
-	  zlog_info ("RIPv1 packet with nexthop value %s",
-		     inet_ntoa (rte->nexthop));
-	  rip_peer_bad_route (from);
-	  continue;
-	}
-
       /* That is, if the provided information is ignored, a possibly
 	 sub-optimal, but absolutely valid, route may be taken.  If
 	 the received Next Hop is not directly reachable, it should be
@@ -1274,15 +1242,7 @@ rip_response_process (struct rip_packet *packet, int size,
 
       /* In case of RIPv2, if prefix in RTE is not netmask applied one
          ignore the entry.  */
-      if ((packet->version == RIPv2) 
-	  && (rte->mask.s_addr != 0) 
-	  && ((rte->prefix.s_addr & rte->mask.s_addr) != rte->prefix.s_addr))
-	{
-	  /*zlog_warn ("RIPv2 address %s is not mask /%d applied one",
-		     inet_ntoa (rte->prefix), ip_masklen (rte->mask));*/
-	  rip_peer_bad_route (from);
-	  continue;
-	}
+      
 
       /* Default route's netmask is ignored. */
       if (packet->version == RIPv2
@@ -1580,7 +1540,7 @@ rip_request_process (struct rip_packet *packet, int size,
     return;
   
   /* RIP peer update. */
-  rip_peer_update (from, packet->version);
+  
 
   lim = ((caddr_t) packet) + size;
   rte = packet->rte;
@@ -1778,29 +1738,7 @@ rip_read (struct thread *t)
     }
 
   /* Packet length check. */
-  if (len < RIP_PACKET_MINSIZ)
-    {
-      zlog_warn ("packet size %d is smaller than minimum size %d",
-		 len, RIP_PACKET_MINSIZ);
-      rip_peer_bad_packet (&from);
-      return len;
-    }
-  if (len > RIP_PACKET_MAXSIZ)
-    {
-      zlog_warn ("packet size %d is larger than max size %d",
-		 len, RIP_PACKET_MAXSIZ);
-      rip_peer_bad_packet (&from);
-      return len;
-    }
-
   /* Packet alignment check. */
-  if ((len - RIP_PACKET_MINSIZ) % 20)
-    {
-      zlog_warn ("packet size %d is wrong for RIP packet alignment", len);
-      rip_peer_bad_packet (&from);
-      return len;
-    }
-
   /* Set RTE number. */
   rtenum = ((len - RIP_PACKET_MINSIZ) / 20);
 
@@ -1808,12 +1746,7 @@ rip_read (struct thread *t)
   packet = &rip_buf.rip_packet;
 
   /* RIP version check. */
-  if (packet->version == 0)
-    {
-      zlog_info ("version 0 with command %d received.", packet->command);
-      rip_peer_bad_packet (&from);
-      return -1;
-    }
+  
 
   /* Dump RIP packet. */
   /* RIP version adjust.  This code should rethink now.  RFC1058 says
@@ -1825,37 +1758,17 @@ rip_read (struct thread *t)
 
   /* Is RIP running or is this RIP neighbor ?*/
   ri = ifp->info;
-  if (! ri->running /*&& ! rip_neighbor_lookup (&from)*/)
-    {
-      rip_peer_bad_packet (&from);
-      return -1;
-    }
+  
 
   /* RIP Version check. RFC2453, 4.6 and 5.1 */
   vrecv = ((ri->ri_receive == RI_RIP_UNSPEC) ?
            rip->version_recv : ri->ri_receive);
-  if ((packet->version == RIPv1) && !(vrecv & RIPv1))
-    {
-      rip_peer_bad_packet (&from);
-      return -1;
-    }
-  if ((packet->version == RIPv2) && !(vrecv & RIPv2))
-    {
-      rip_peer_bad_packet (&from);
-      return -1;
-    }
+  
   
   /* RFC2453 5.2 If the router is not configured to authenticate RIP-2
      messages, then RIP-1 and unauthenticated RIP-2 messages will be
      accepted; authenticated RIP-2 messages shall be discarded.  */
-  if ((ri->auth_type == RIP_NO_AUTH) 
-      && rtenum 
-      && (packet->version == RIPv2) 
-      && (packet->rte->family == htons(RIP_FAMILY_AUTH)))
-    {
-      rip_peer_bad_packet (&from);
-      return -1;
-    }
+  
   
   /* RFC:
      If the router is configured to authenticate RIP-2 messages, then
@@ -1886,30 +1799,11 @@ rip_read (struct thread *t)
       && packet->version == RIPv1)
     {
       /* Discard RIPv1 messages other than REQUESTs */
-      if (packet->command != RIP_REQUEST)
-        {
-          rip_peer_bad_packet (&from);
-          return -1;
-        }
     }
   else if (ri->auth_type != RIP_NO_AUTH)
     {
       const char *auth_desc;
-      
-      if (rtenum == 0)
-        {
-          /* There definitely is no authentication in the packet. */
-          rip_peer_bad_packet (&from);
-          return -1;
-        }
-      
-      /* First RTE must be an Authentication Family RTE */
-      if (packet->rte->family != htons(RIP_FAMILY_AUTH))
-        {
-          rip_peer_bad_packet (&from);
-	  return -1;
-        }
-      
+
       /* Check RIPv2 authentication. */
       switch (ntohs(packet->rte->tag))
         {
@@ -1929,16 +1823,7 @@ rip_read (struct thread *t)
             ret = 0;
             auth_desc = "unknown type";
           }
-      
-      if (ret)
-        {
-        
-        }
-      else
-        {
-          rip_peer_bad_packet (&from);
-          return -1;
-        }
+
     }
   
   /* Process each command. */
@@ -1955,16 +1840,16 @@ rip_read (struct thread *t)
     case RIP_TRACEOFF:
       zlog_info ("Obsolete command %s received, please sent it to routed", 
 		 lookup (rip_msg, packet->command));
-      rip_peer_bad_packet (&from);
+      
       break;
     case RIP_POLL_ENTRY:
       zlog_info ("Obsolete command %s received", 
 		 lookup (rip_msg, packet->command));
-      rip_peer_bad_packet (&from);
+      
       break;
     default:
       zlog_info ("Unknown RIP command %d received", packet->command);
-      rip_peer_bad_packet (&from);
+      
       break;
     }
 
@@ -3519,7 +3404,7 @@ DEFUN (show_ip_rip_status,
 
   vty_out (vty, "  Routing Information Sources:%s", VTY_NEWLINE);
   vty_out (vty, "    Gateway          BadPackets BadRoutes  Distance Last Update%s", VTY_NEWLINE);
-  rip_peer_display (vty);
+  
 
   rip_distance_show (vty);
 

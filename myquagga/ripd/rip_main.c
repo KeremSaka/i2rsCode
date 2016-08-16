@@ -287,7 +287,7 @@ main (int argc, char **argv)
   rip_init ();
   //rip_if_init ();
   rip_zclient_init (master);
-  rip_peer_init ();
+  
 
   /* Get configuration file. */
   vty_read_config (config_file, config_default);
