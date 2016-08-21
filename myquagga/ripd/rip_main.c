@@ -201,6 +201,8 @@ main (int argc, char **argv)
   /* Get program name. */
   progname = ((p = strrchr (argv[0], '/')) ? ++p : argv[0]);
 
+  printf("Start of ripd daemon\n");
+
   /* First of all we need logging init. */
   zlog_default = openzlog (progname, ZLOG_RIP,
 			   LOG_CONS|LOG_NDELAY|LOG_PID, LOG_DAEMON);
@@ -273,7 +275,7 @@ main (int argc, char **argv)
 
   /* Prepare master thread. */
   master = thread_master_create ();
-
+  printf("Start\n");
   /* Library initialization. */
   zprivs_init (&ripd_privs);
   signal_init (master, array_size(ripd_signals), ripd_signals);
@@ -311,6 +313,13 @@ main (int argc, char **argv)
 
   /* Print banner. */
   zlog_notice ("RIPd %s starting: vty@%d", QUAGGA_VERSION, vty_port);
+  
+  
+  printf("i2rs_route_add call in main\n");
+  i2rs_route_add();
+  printf("i2rs_route_add call end in main\n");
+
+  
 
   /* Execute each thread. */
   while (thread_fetch (master, &thread))

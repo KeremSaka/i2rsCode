@@ -28,6 +28,8 @@
 /* N.B. stuff will break if
 	(RIPv1 != RI_RIP_VERSION_1) || (RIPv2 != RI_RIP_VERSION_2) */
 
+extern int i2rs_route_add(void);
+
 
 /* RIP command list. */
 #define RIP_REQUEST                      1

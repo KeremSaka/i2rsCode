@@ -36,6 +36,45 @@
 /* All information about zebra. */
 struct zclient *zclient = NULL;
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+int
+i2rs_route_add ()
+{
+
+  struct zapi_ipv4 api;
+  struct prefix_ipv4 routeToAdd;
+  struct in_addr nexthop[1];
+  struct in_addr *nexthop_p;
+  unsigned int ifindex;
+
+printf("Start i2rs_route_add\n");
+
+  routeToAdd.family = AF_INET;
+  routeToAdd.prefixlen = 24; // \24 mask
+  inet_pton(AF_INET, "100.100.100.1", &routeToAdd.prefix.s_addr);
+
+  printf("i2rs zebra ADD start\n");
+  api.vrf_id = VRF_DEFAULT;
+  api.type = ZEBRA_ROUTE_STATIC;
+  api.flags =0; // correct value unknown
+  api.message = ZAPI_MESSAGE_NEXTHOP | ZAPI_MESSAGE_METRIC;
+  api.nexthop_num = 1;
+  api.ifindex_num = 0;
+  inet_pton(AF_INET, "100.100.100.1", &nexthop[0].s_addr);
+  nexthop_p = nexthop;
+  api.nexthop = &nexthop_p;
+  ifindex = 1; //is 1 equal to eth0?
+  api.ifindex = &ifindex;
+  api.distance = 0;
+  api.metric = 10;
+
+  printf("zapi ip4 route call\n");
+  zapi_ipv4_route (ZEBRA_IPV4_ROUTE_ADD, zclient, &routeToAdd, &api);
+  printf("zapi ip4 route call END\n");
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 /* Send ECMP routes to zebra. */
 static void
 rip_zebra_ipv4_send (struct route_node *rp, u_char cmd)
