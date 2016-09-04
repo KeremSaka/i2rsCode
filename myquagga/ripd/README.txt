@@ -14,3 +14,7 @@ than compilation problems
 delete anything else makes error in compilation
 ripd.c has funktion for adding routes
 
+after debug understand that 
+rip compiles wrong have to ask edwin for this
+
+new idea why add doesn´t work need maybe the callback funktion in zclient to work properly
