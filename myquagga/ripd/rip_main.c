@@ -34,7 +34,7 @@
 #include "sigevent.h"
 #include "zclient.h"
 #include "vrf.h"
-
+#include "table.h"
 #include "ripd/ripd.h"
 
 /* ripd options. */
@@ -195,6 +195,11 @@ main (int argc, char **argv)
   char *progname;
   struct thread thread;
 
+  struct list *list = NULL;
+  char tempDST[24] = "100.100.100.1";
+  struct in_addr temp;
+  struct rip_info *rinfo;
+  struct route_node *rp;
   /* Set umask before anything for security */
   umask (0027);
 
@@ -316,10 +321,22 @@ main (int argc, char **argv)
   
   
   printf("i2rs_route_add call in main\n");
-  i2rs_route_add();
+  //i2rs_route_add();
+  rinfo = THREAD_ARG(&thread);
+
+  rp = rinfo->rp;
+
+  rp->info = list_new ();
+  list = (struct list *)rp->info;
+
+  inet_aton(tempDST, &temp);
+  rp->p.family = AF_INET;
+  rp->p.prefixlen =(u_char) 32;
+  rp->p.u.prefix4 = temp;
+
+  rip_zebra_ipv4_add (rp);
   printf("i2rs_route_add call end in main\n");
 
-  
 
   /* Execute each thread. */
   while (thread_fetch (master, &thread))
