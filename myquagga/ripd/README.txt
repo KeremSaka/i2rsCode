@@ -18,3 +18,8 @@ after debug understand that
 rip compiles wrong have to ask edwin for this
 
 new idea why add doesn´t work need maybe the callback funktion in zclient to work properly
+
+still no idea about rip
+reserch resault need callback funktion in i2rsd zclient
+looked into ospfd deamon for hints importent part is ospf_exteral_info_add
+funktion and file ospf_asbr.c changing the information of an route node
