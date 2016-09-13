@@ -215,12 +215,85 @@ return 0;
   zclient->ipv4_route_delete = i2rs_route_delete;*/
 //}
 
+static int  i2rs_route_read(int command, struct zclient *zclient, zebra_size_t length, vrf_id_t vrf_id)
+{
+  struct stream *s;
+  struct zapi_ipv4 api;
+  unsigned long ifindex;
+  struct in_addr nexthop;
+  struct prefix_ipv4 p;
+  struct external_info *ei;
+  struct ospf *ospf;
+  unsigned char plength = 0;
+  struct route_node *rn;
+  struct exterbal_info *new;
+
+  s = zclient->ibuf;
+  ifindex = 0;
+  nexthop.s_addr = 0;
+
+  /* Type, flags, message. */
+  api.type = stream_getc (s);
+  api.flags = stream_getc (s);
+  api.message = stream_getc (s);
+
+  /* IPv4 prefix. */
+  memset (&p, 0, sizeof (struct prefix_ipv4));
+  p.family = AF_INET;
+  plength = stream_getc (s);
+  p.prefixlen = MIN(IPV4_MAX_PREFIXLEN, plength);
+  stream_get (&p.prefix, s, PSIZE (p.prefixlen));
+
+  if (IPV4_NET127(ntohl(p.prefix.s_addr)))
+    return 0;
+  /* Nexthop, ifindex, distance, metric. */
+  if (CHECK_FLAG (api.message, ZAPI_MESSAGE_NEXTHOP))
+    {
+      api.nexthop_num = stream_getc (s);
+      nexthop.s_addr = stream_get_ipv4 (s);
+    }
+  if (CHECK_FLAG (api.message, ZAPI_MESSAGE_IFINDEX))
+    {
+      api.ifindex_num = stream_getc (s);
+      /* XXX assert(api.ifindex_num == 1); */
+      ifindex = stream_getl (s);
+    }
+  if (CHECK_FLAG (api.message, ZAPI_MESSAGE_DISTANCE))
+    api.distance = stream_getc (s);
+  if (CHECK_FLAG (api.message, ZAPI_MESSAGE_METRIC))
+    api.metric = stream_getl (s);
+
+  //ospf_external_info_add (api.type, p, ifindex, nexthop);
+  if(EXTERNAL_INFO(type) == NULL)
+    EXTERNAL_INFO(type)=route_table_init();
+  rn = route_node_get(EXTERNAL_INFO(type),(struct prefix *) &p);
+
+  new = (struct external_info *)
+    XCALLOC (MTYPE_OSPF_EXTERNAL_INFO, sizeof (struct external_info));
+  new->type = type;
+
+  new->p = p;
+  new->ifindex = ifindex;
+  new->nexthop = nexthop;
+  new->tag = 0;
+
+  rn->info = new;
+
+  return 0;
+
+
+
+
+
+}
+
 void i2rs_zclient_init (struct thread_master *master)
 {
   /* Set default value to the zebra client structure. */
   zclient = zclient_new (master);
   zclient_init (zclient, ZEBRA_ROUTE_STATIC);
-  zclient->ipv4_route_add = i2rs_route_add;
+ // zclient->zebra_connected = ;
+  zclient->ipv4_route_add = i2rs_route_read;
 //  zclient->ipv4_route_delete = zebra_read_ipv4;
   if (zclient == NULL){
     printf("I'm in i2rs_zebra.c, after i2rs_zclient_init (&master): WHERE IN HELL IS THE ZCLIENT?\n");

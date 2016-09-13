@@ -23,3 +23,7 @@ still no idea about rip
 reserch resault need callback funktion in i2rsd zclient
 looked into ospfd deamon for hints importent part is ospf_exteral_info_add
 funktion and file ospf_asbr.c changing the information of an route node
+
+callback funktion research added to github currently not working
+
+trying answrs from quagga dev team

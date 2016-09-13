@@ -321,13 +321,14 @@ main (int argc, char **argv)
   
   
   printf("i2rs_route_add call in main\n");
+  thread_fetch (master, &thread);
   //i2rs_route_add();
   rinfo = THREAD_ARG(&thread);
 
   rp = rinfo->rp;
 
-  rp->info = list_new ();
-  list = (struct list *)rp->info;
+ // rp->info = list_new ();
+ // list = (struct list *)rp->info;
 
   inet_aton(tempDST, &temp);
   rp->p.family = AF_INET;
