@@ -65,7 +65,7 @@ i2rs_route_add ()//(struct prefix_ipv4 *p)
   api.message = ZAPI_MESSAGE_NEXTHOP | ZAPI_MESSAGE_METRIC;
   api.nexthop_num = 1;
   api.ifindex_num = 0;
-  inet_pton(AF_INET, "100.100.100.1", &nexthop[0].s_addr);
+  inet_pton(AF_INET, "192.168.56.0", &nexthop[0].s_addr);
   nexthop_p = nexthop;
   api.nexthop = &nexthop_p;
   ifindex = 1; //is 1 equal to eth0?
@@ -160,13 +160,10 @@ int zclient_read_zapi_ipv4(struct zclient* zclient, struct zapi_ipv4 *zapi, stru
 	struct stream *s;
 
 	s = zclient->ibuf;
-	
 	zapi->type = stream_getc(s);
 	zapi->flags = stream_getc(s);
 	zapi->message = stream_getc(s);
-	
 	memset(p,0,sizeof(struct prefix_ipv4));
-	
 	p->family = AF_INET;
 	p->prefixlen = stream_getc(s);	
 	stream_get(&p->prefix,s,PSIZE(p->prefixlen));
@@ -192,7 +189,7 @@ int i2rs_zebra_route_manage(int command, struct zclient *zclient, zebra_size_t l
 	struct zapi_ipv4 zapi;
 	unsigned long ifindex;
 	struct in_addr nexthop;
-	
+
 	zclient_read_zapi_ipv4(zclient,&zapi,&p,&ifindex,&nexthop);
 return 0;
 }
@@ -227,7 +224,7 @@ static int  i2rs_route_read(int command, struct zclient *zclient, zebra_size_t l
   unsigned char plength = 0;
   struct route_node *rn;
   struct exterbal_info *new;
-
+  u_char type;
   s = zclient->ibuf;
   ifindex = 0;
   nexthop.s_addr = 0;
@@ -262,14 +259,12 @@ static int  i2rs_route_read(int command, struct zclient *zclient, zebra_size_t l
     api.distance = stream_getc (s);
   if (CHECK_FLAG (api.message, ZAPI_MESSAGE_METRIC))
     api.metric = stream_getl (s);
-
+/*
   //ospf_external_info_add (api.type, p, ifindex, nexthop);
-  if(EXTERNAL_INFO(type) == NULL)
-    EXTERNAL_INFO(type)=route_table_init();
+  EXTERNAL_INFO(type)=route_table_init();
   rn = route_node_get(EXTERNAL_INFO(type),(struct prefix *) &p);
 
-  new = (struct external_info *)
-    XCALLOC (MTYPE_OSPF_EXTERNAL_INFO, sizeof (struct external_info));
+  new = (struct external_info *) XCALLOC (MTYPE_OSPF_EXTERNAL_INFO, sizeof (struct external_info));
   new->type = type;
 
   new->p = p;
@@ -278,13 +273,8 @@ static int  i2rs_route_read(int command, struct zclient *zclient, zebra_size_t l
   new->tag = 0;
 
   rn->info = new;
-
+*/
   return 0;
-
-
-
-
-
 }
 
 void i2rs_zclient_init (struct thread_master *master)

@@ -27,3 +27,7 @@ funktion and file ospf_asbr.c changing the information of an route node
 callback funktion research added to github currently not working
 
 trying answrs from quagga dev team
+
+answers didnt work and callback funktion makes some problems
+
+will try this weekend last time befor starting writing thesis
